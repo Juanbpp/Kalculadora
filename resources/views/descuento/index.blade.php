@@ -51,6 +51,7 @@
 											<td>{{ $descuento->descuento }}</td>
 											<td>{{ $descuento->importe }}</td>
 
+                                            
                                             <td>
                                                 <form action="{{ route('descuentos.destroy',$descuento->id) }}" method="POST">
                                                     <a class="btn btn-sm btn-primary " href="{{ route('descuentos.show',$descuento->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Mostrar') }}</a>
