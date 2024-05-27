@@ -28,7 +28,7 @@ class RedsysController extends Controller
             Redsys::setUrlOk(config('redsys.url_ok'));
             Redsys::setUrlKo(config('redsys.url_ko'));
             Redsys::setVersion('HMAC_SHA256_V1');
-            Redsys::setTradeName('Tienda Juan');
+            Redsys::setTradeName('Kalculadora S.L.');
             Redsys::setTitular($name);
             Redsys::setProductDescription($description);
             Redsys::setEnviroment('test');

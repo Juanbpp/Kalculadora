@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\support\Facades\Hash;
+use Spatie\Permission\Contracts\Role;
 
 class DatabaseSeeder extends Seeder
 {
@@ -19,6 +20,7 @@ class DatabaseSeeder extends Seeder
         $this->call(productoSeeder::class);
         $this->call(descuentoSeeder::class);
         $this->call(codificacionSeeder::class);     
+        $this->call(roleSeeder::class);     
      
         // \App\Models\User::factory(10)->create();
 

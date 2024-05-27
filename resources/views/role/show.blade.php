@@ -14,7 +14,7 @@
                             <span class="card-title">{{ __('Show') }} Role</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary btn-sm" href="{{ route('roles.index') }}"> {{ __('Volver') }}</a>
+                            <a class="btn btn-primary btn-sm" href="{{ route('roles.index') }}"> {{ __('Volver') }}}}</a>
                         </div>
                     </div>
 
@@ -22,18 +22,8 @@
                         
                         <div class="form-group mb-2 mb20">
                             <strong>Rol:</strong>
-                            {{ $role->name }}
+                            {{ $role->rol }}
                         </div>
-                        @foreach ($permissions as $permission)
-                        <div>
-                            <label>
-                                
-                                {!! Form::checkbox('$permission[]', $permission->id, null, ['class'=>'mr-1']) !!}
-                                {{$permission->descripcion}}
-                            </label>
-                        </div>
-                        @endforeach
-             
 
                     </div>
                 </div>

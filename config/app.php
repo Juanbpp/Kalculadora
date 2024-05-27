@@ -170,8 +170,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Ssheduardo\Redsys\RedsysServiceProvider::class,
-        Spatie\Permission\PermissionServiceProvider::class,
-        
+   
     ])->toArray(),
 
     /*

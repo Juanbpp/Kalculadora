@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container" onload="javascript:ver()">
-        <form id="formulario"name="formulario" method="POST" action="{{ route('principal2') }}" role="form" enctype="multipart/form-data">
+        <form id="formulario"name="formulario" method="POST" action="{{ route('orange') }}" role="form" enctype="multipart/form-data">
             @csrf
             <div class="row">
                 <div class="col-md-12">

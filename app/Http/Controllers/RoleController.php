@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Spatie\Permission\Models\Role;
+use App\Models\Role;
 use App\Http\Requests\RoleRequest;
-use Spatie\Permission\Models\Permission;
 
 /**
  * Class RoleController
@@ -27,9 +26,8 @@ class RoleController extends Controller
      */
     public function create()
     {
-        $permissions= Permission::all();
         $role = new Role();
-        return view('role.create', compact('role','permissions'));
+        return view('role.create', compact('role'));
     }
 
     /**
@@ -37,8 +35,8 @@ class RoleController extends Controller
      */
     public function store(RoleRequest $request)
     {
-        $role = Role::create($request->validated());
-        $role->permissions()->sync($request->permissions);
+        Role::create($request->validated());
+
         return redirect()->route('roles.index')
             ->with('success', 'Role created successfully.');
     }
@@ -49,9 +47,8 @@ class RoleController extends Controller
     public function show($id)
     {
         $role = Role::find($id);
-        $permissions= Permission::all();
-        
-        return view('role.show', compact('role','permissions'));
+
+        return view('role.show', compact('role'));
     }
 
     /**
@@ -60,9 +57,8 @@ class RoleController extends Controller
     public function edit($id)
     {
         $role = Role::find($id);
-        $permissions= Permission::all();
-    
-        return view('role.edit', compact('role','permissions'));
+
+        return view('role.edit', compact('role'));
     }
 
     /**
@@ -71,8 +67,7 @@ class RoleController extends Controller
     public function update(RoleRequest $request, Role $role)
     {
         $role->update($request->validated());
-        $role->permissions()->sync($request->permissions);
-    
+
         return redirect()->route('roles.index')
             ->with('success', 'Role updated successfully');
     }

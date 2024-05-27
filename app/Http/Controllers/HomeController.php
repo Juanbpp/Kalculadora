@@ -28,11 +28,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('welcome');
-    }
-    public function principal()
-    {
-        return view('principal');
+        $productosnet = Producto::all()->where('id_tipo',1)->where('id_marca',1);
+        $productosconvergente = Producto::all()->where('id_tipo',2)->where('id_marca',1);
+        $productostv = Producto::all()->where('id_tipo',3)->where('id_marca',1);
+        $productosadicionales = Producto::all()->where('id_tipo',4)->where('id_marca',1);
+        $productosmoviles = Producto::all()->where('id_tipo',5)->where('id_marca',1);
+        $descuentos = Descuento::all();
+        $codificaciones = Codificacion::all();
+ 
+        return view('principal2',compact('descuentos','productosnet','productosconvergente','productostv','productosadicionales','productosmoviles','codificaciones'));
     }
     public function principal2()
     {
@@ -57,8 +61,8 @@ class HomeController extends Controller
 
         return view('principal3',compact('descuentos','productosnet','productosconvergente','productostv','productosadicionales','productosmoviles','codificaciones'));
     }
- 
-    public function principal4()
+
+    public function movistar()
     {
         $productosnet = Producto::all()->where('id_tipo',1)->where('id_marca',3);
         $productosconvergente = Producto::all()->where('id_tipo',2)->where('id_marca',3);
@@ -68,9 +72,9 @@ class HomeController extends Controller
         $descuentos = Descuento::all();
         $codificaciones = Codificacion::all();
 
-        return view('principal4',compact('descuentos','productosnet','productosconvergente','productostv','productosadicionales','productosmoviles','codificaciones'));
+        return view('movistar',compact('descuentos','productosnet','productosconvergente','productostv','productosadicionales','productosmoviles','codificaciones'));
     }
-    public function principal5()
+    public function vodafone()
     {
         $productosnet = Producto::all()->where('id_tipo',1)->where('id_marca',4);
         $productosconvergente = Producto::all()->where('id_tipo',2)->where('id_marca',4);
@@ -80,9 +84,9 @@ class HomeController extends Controller
         $descuentos = Descuento::all();
         $codificaciones = Codificacion::all();
 
-        return view('principal5',compact('descuentos','productosnet','productosconvergente','productostv','productosadicionales','productosmoviles','codificaciones'));
+        return view('vodafone',compact('descuentos','productosnet','productosconvergente','productostv','productosadicionales','productosmoviles','codificaciones'));
     }
-    public function principal6()
+    public function orange()
     {
         $productosnet = Producto::all()->where('id_tipo',1)->where('id_marca',5);
         $productosconvergente = Producto::all()->where('id_tipo',2)->where('id_marca',5);
@@ -92,9 +96,9 @@ class HomeController extends Controller
         $descuentos = Descuento::all();
         $codificaciones = Codificacion::all();
 
-        return view('principal6',compact('descuentos','productosnet','productosconvergente','productostv','productosadicionales','productosmoviles','codificaciones'));
+        return view('orange',compact('descuentos','productosnet','productosconvergente','productostv','productosadicionales','productosmoviles','codificaciones'));
     }
-    public function principal7()
+    public function jazztel()
     {
         $productosnet = Producto::all()->where('id_tipo',1)->where('id_marca',6);
         $productosconvergente = Producto::all()->where('id_tipo',2)->where('id_marca',6);
@@ -104,14 +108,15 @@ class HomeController extends Controller
         $descuentos = Descuento::all();
         $codificaciones = Codificacion::all();
 
-        return view('principal7',compact('descuentos','productosnet','productosconvergente','productostv','productosadicionales','productosmoviles','codificaciones'));
+        return view('jazztel',compact('descuentos','productosnet','productosconvergente','productostv','productosadicionales','productosmoviles','codificaciones'));
     }
+
     public function yoigo(Request $request)
     {
         Registro::create($request->all());
         
         if ($request->id_codificacion=="1"){
-       
+
         $name= $request->DNI;
         $total= $request->pvp;
         $description=$request->codificacion;
@@ -123,12 +128,12 @@ class HomeController extends Controller
             ->with('success', 'Registro created successfully.');
        }
     }
-    public function masmovil(Request $request)
-    {
+       public function masmovil(Request $request)
+       {
         Registro::create($request->all());
         
         if ($request->id_codificacion=="1"){
-       
+
         $name= $request->DNI;
         $total= $request->pvp;
         $description=$request->codificacion;
@@ -138,32 +143,15 @@ class HomeController extends Controller
         }else{
             return redirect()->route('principal3')
             ->with('success', 'Registro created successfully.');
-       }
-    }
-       public function movistarpago(Request $request)
-       {
-        Registro::create($request->all());
-        
-        if ($request->id_codificacion=="1"){
-       
-        $name= $request->DNI;
-        $total= $request->pvp;
-        $description=$request->codificacion;
-        $redsys= new RedsysController;
-
-        $redsys->index($name, $total, false, $description);
-        }else{
-            return redirect()->route('principal4')
-            ->with('success', 'Registro created successfully.');
           }
    
         }
-        public function vodafonepago(Request $request)
+        public function movistarpago(Request $request)
         {
          Registro::create($request->all());
          
          if ($request->id_codificacion=="1"){
-        
+ 
          $name= $request->DNI;
          $total= $request->pvp;
          $description=$request->codificacion;
@@ -171,17 +159,17 @@ class HomeController extends Controller
  
          $redsys->index($name, $total, false, $description);
          }else{
-             return redirect()->route('principal5')
+             return redirect()->route('movistar')
              ->with('success', 'Registro created successfully.');
            }
     
          }
-         public function orangepago(Request $request)
+         public function vodafonepago(Request $request)
          {
           Registro::create($request->all());
           
           if ($request->id_codificacion=="1"){
-         
+  
           $name= $request->DNI;
           $total= $request->pvp;
           $description=$request->codificacion;
@@ -189,17 +177,17 @@ class HomeController extends Controller
   
           $redsys->index($name, $total, false, $description);
           }else{
-              return redirect()->route('principal6')
+              return redirect()->route('vodafone')
               ->with('success', 'Registro created successfully.');
             }
      
           }
-          public function jazztelpago(Request $request)
+          public function orangepago(Request $request)
           {
            Registro::create($request->all());
            
            if ($request->id_codificacion=="1"){
-          
+   
            $name= $request->DNI;
            $total= $request->pvp;
            $description=$request->codificacion;
@@ -207,11 +195,29 @@ class HomeController extends Controller
    
            $redsys->index($name, $total, false, $description);
            }else{
-               return redirect()->route('principal7')
+               return redirect()->route('orange')
                ->with('success', 'Registro created successfully.');
              }
       
            }
+           public function jazztelpago(Request $request)
+           {
+            Registro::create($request->all());
+            
+            if ($request->id_codificacion=="1"){
+    
+            $name= $request->DNI;
+            $total= $request->pvp;
+            $description=$request->codificacion;
+            $redsys= new RedsysController;
+    
+            $redsys->index($name, $total, false, $description);
+            }else{
+                return redirect()->route('jazztel')
+                ->with('success', 'Registro created successfully.');
+              }
+       
+            }
           
 }
 
