@@ -50,12 +50,11 @@ Route::get('/redsys/ok',[App\Http\Controllers\redsysController::class,'comprobar
 Route::post('/redsys/ko',[App\Http\Controllers\redsysController::class,'comprobar']);
 Route::get('/redsys/ko',[App\Http\Controllers\redsysController::class,'comprobar']);
 
-Route::get('/5', [App\Http\Controllers\HomeController::class,'buscar'])->name('buscar');
-//Route::get('/usuarios/create', function () {return view('usuarios/create');})->middleware(middleware:'auth');;
-
-//Route::get('/usuarios', function () {return view('usuarios.index');})->middleware(middleware:'auth');;
 
 
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+
+
+
