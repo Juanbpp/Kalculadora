@@ -43,12 +43,12 @@ Route::post('/jazztel', [App\Http\Controllers\HomeController::class,'jazztelpago
 /**
 * Comprobar redsys
 */
-Route::post('/redsys/notification',[App\Http\Controllers\redsysController::class,'comprobar']);
-Route::get('/redsys/notification',[App\Http\Controllers\redsysController::class,'comprobar']);
-Route::post('/redsys/ok',[App\Http\Controllers\redsysController::class,'comprobar']);
-Route::get('/redsys/ok',[App\Http\Controllers\redsysController::class,'comprobar']);
-Route::post('/redsys/ko',[App\Http\Controllers\redsysController::class,'comprobar']);
-Route::get('/redsys/ko',[App\Http\Controllers\redsysController::class,'comprobar']);
+Route::post('/redsys/notification',[App\Http\Controllers\RedsysController::class,'comprobar']);
+Route::get('/redsys/notification',[App\Http\Controllers\RedsysController::class,'comprobar']);
+Route::post('/redsys/ok',[App\Http\Controllers\RedsysController::class,'comprobar']);
+Route::get('/redsys/ok',[App\Http\Controllers\RedsysController::class,'comprobar']);
+Route::post('/redsys/ko',[App\Http\Controllers\RedsysController::class,'comprobar']);
+Route::get('/redsys/ko',[App\Http\Controllers\RedsysController::class,'comprobar']);
 
 
 
