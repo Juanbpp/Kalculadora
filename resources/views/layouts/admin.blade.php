@@ -43,10 +43,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="/yoigo" class="nav-link"><img src="{{ url('/dist/img/yoigo.png') }}"</a>
+                    <a href="/masmovil" class="nav-link"><img src="{{ url('/dist/img/masmovil.png') }}"</a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="/masmovil" class="nav-link"><img src="{{ url('/dist/img/masmovil.png') }}"</a>
+                    <a href="/yoigo" class="nav-link"><img src="{{ url('/dist/img/yoigo.png') }}"</a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="/movistar" class="nav-link"><img src="{{ url('/dist/img/movistar.png') }}"</a>
