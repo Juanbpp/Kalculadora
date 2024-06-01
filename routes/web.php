@@ -11,11 +11,11 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\RoleController;
 use Illuminate\Support\Facades\Facade;
 
-Route::get('/', function () {return view('index');})->middleware(middleware:'auth');
+Route::get('/yoigo', function () {return view('principal2');})->middleware(middleware:'auth');
 
-Auth::routes(['register'=>false]);
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'principal2'])->name('home2');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'principal2'])->name('home');
 Route::get('/yoigo/', [App\Http\Controllers\HomeController::class, 'principal2'])->name('principal2');
 Route::get('/masmovil/', [App\Http\Controllers\HomeController::class, 'principal3'])->name('principal3');
 Route::get('/movistar/', [App\Http\Controllers\HomeController::class, 'movistar'])->name('movistar');
