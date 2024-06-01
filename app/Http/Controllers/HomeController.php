@@ -28,15 +28,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $productosnet = Producto::all()->where('id_tipo',1)->where('id_marca',1);
-        $productosconvergente = Producto::all()->where('id_tipo',2)->where('id_marca',1);
-        $productostv = Producto::all()->where('id_tipo',3)->where('id_marca',1);
-        $productosadicionales = Producto::all()->where('id_tipo',4)->where('id_marca',1);
-        $productosmoviles = Producto::all()->where('id_tipo',5)->where('id_marca',1);
-        $descuentos = Descuento::all();
-        $codificaciones = Codificacion::all();
  
-        return view('principal2',compact('descuentos','productosnet','productosconvergente','productostv','productosadicionales','productosmoviles','codificaciones'));
+        return view('home');
     }
     public function principal2()
     {
