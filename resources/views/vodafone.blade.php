@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-    <div class="container" onload="javascript:ver()">
+    <div class="container"  style="background-color: rgb(255, 68, 68)" onload="javascript:cambio()">
         <form id="formulario"name="formulario" method="POST" action="{{ route('vodafone') }}" role="form" enctype="multipart/form-data">
             @csrf
             <div class="row">

@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-    <div class="container" onload="javascript:ver()">
+    <div class="container"  style="background-color: #c39bd3" onload="javascript:cambio()">
         <form id="formulario"name="formulario" method="POST" action="{{ route('principal2') }}" role="form" enctype="multipart/form-data">
             @csrf
             <div class="row">
