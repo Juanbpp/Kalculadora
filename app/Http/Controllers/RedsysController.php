@@ -56,9 +56,8 @@ class RedsysController extends Controller
         public function comprobar(Request $request)
         {
         try{
-            return redirect()->back();
 
-  /*      $key = config('redsys.key');
+        $key = config('redsys.key');
         $parameters = Redsys::getMerchantParameters($request->input('Ds_MerchantParameters'));
         $DsResponse = $parameters["Ds_Response"];
         $DsResponse += 0;
@@ -66,7 +65,7 @@ class RedsysController extends Controller
             return redirect()->back()->with('message','Pago no realizado');
         } else {
             return redirect()->back()->with('message','Pago realizado correctamente');
-        }*/
+        }
         } catch (TpvException $e) {
         echo $e->getMessage();
         }
