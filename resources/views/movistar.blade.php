@@ -17,7 +17,7 @@
                                                 size="9" value="" onchange="javascript:cambio()"/>
                                             <label for="telefono"> Telefono </label>
                                             <input type="text" class="form-control" name="telefono" id="telefono"
-                                                size="9" pattern="[0-9]{9}" onchange="javascript:cambio()"/>
+                                                size="9" onchange="javascript:cambio()"/>
                                         </div>
                                         <div class="col">
                                             <label for="Nombre"> Nombre </label>
