@@ -14,6 +14,7 @@
 <link rel="stylesheet" href="{{ Secure_asset('dist/css/adminlte.min.css?v=3.2.0') }}">
 </head>
 <body class="hold-transition login-page">
+    <div class="row">
     <div class="col">
         <img src="{{ url('/dist/img/logo.png') }}" >
     </div>
@@ -65,7 +66,7 @@ Recuerdame
 </div>
 </div>
 </div>
-
+    </div>
 <script src="{{ Secure_asset('plugins/jquery/jquery.min.js') }}"></script>
 
 <script src="{{ Secure_asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
