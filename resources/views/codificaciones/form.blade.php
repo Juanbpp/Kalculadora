@@ -2,9 +2,9 @@
     <div class="col-md-12">
         
         <div class="form-group mb-2 mb20">
-            <label for="codificaciones" class="form-label">{{ __('Codificaciones') }}</label>
-            <input type="text" name="codificaciones" class="form-control @error('codificaciones') is-invalid @enderror" value="{{ old('codificaciones', $codificacion->codificacion) }}" id="codificaciones" placeholder="Codificaciones">
-            {!! $errors->first('codificaciones', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
+            <label for="codificacion" class="form-label">{{ __('Codificacion') }}</label>
+            <input type="text" name="codificacion" class="form-control @error('codificacion') is-invalid @enderror" value="{{ old('codificacion', $codificacion->codificacion) }}" id="codificacion" placeholder="Codificacion">
+            {!! $errors->first('codificacion', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
 
     </div>
