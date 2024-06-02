@@ -186,6 +186,11 @@
             <input type="text" name="id_user" class="form-control @error('id_user') is-invalid @enderror" value="{{ old('id_user', $registro?->id_user) }}" id="id_user" placeholder="Id User">
             {!! $errors->first('id_user', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
+        <div class="form-group mb-2 mb20">
+            <label for="created_at" class="form-label">{{ __('created_at') }}</label>
+            <input type="text" name="created_at" class="form-control @error('created_at') is-invalid @enderror" value="{{ old('created_at', $registro?->created_at) }}" id="created_at" placeholder="Creado">
+            {!! $errors->first('created_at', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
+        </div>
 
     </div>
     <div class="col-md-12 mt20 mt-2">

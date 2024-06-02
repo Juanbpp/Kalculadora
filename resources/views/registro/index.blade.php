@@ -73,6 +73,7 @@
 										<th>Observaciones</th>
 										<th>Id Codificacion</th>
 										<th>Id User</th>
+										<th>Creado</th>
 
                                         <th></th>
                                     </tr>
@@ -119,6 +120,7 @@
 											<td>{{ $registro->observaciones }}</td>
 											<td>{{ $registro->id_codificacion }}</td>
 											<td>{{ $registro->id_user }}</td>
+											<td>{{ $registro->created_at }}</td>
 
                                             <td>
                                                 <form action="{{ route('registros.destroy',$registro->id) }}" method="POST">

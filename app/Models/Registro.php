@@ -62,7 +62,7 @@ class Registro extends Model
      *
      * @var array
      */
-    protected $fillable = ['DNI', 'telefono', 'impuesto', 'id_net', 'id_convergente', 'id_tv', 'id_descuento', 'id_adicional_1', 'id_adicional_2', 'id_adicional_3', 'id_adicional_4', 'id_adicional_5', 'cantidad_adicional_1', 'cantidad_adicional_2', 'cantidad_adicional_3', 'cantidad_adicional_4', 'cantidad_adicional_5', 'id_movil_1', 'id_movil_2', 'id_movil_3', 'id_movil_4', 'id_movil_5', 'cantidad_movil_1', 'cantidad_movil_2', 'cantidad_movil_3', 'cantidad_movil_4', 'cantidad_movil_5', 'descuento_movil_1', 'descuento_movil_2', 'descuento_movil_3', 'descuento_movil_4', 'descuento_movil_5', 'pvp', 'codificacion', 'observaciones', 'id_codificacion', 'id_user'];
+    protected $fillable = ['DNI', 'telefono', 'impuesto', 'id_net', 'id_convergente', 'id_tv', 'id_descuento', 'id_adicional_1', 'id_adicional_2', 'id_adicional_3', 'id_adicional_4', 'id_adicional_5', 'cantidad_adicional_1', 'cantidad_adicional_2', 'cantidad_adicional_3', 'cantidad_adicional_4', 'cantidad_adicional_5', 'id_movil_1', 'id_movil_2', 'id_movil_3', 'id_movil_4', 'id_movil_5', 'cantidad_movil_1', 'cantidad_movil_2', 'cantidad_movil_3', 'cantidad_movil_4', 'cantidad_movil_5', 'descuento_movil_1', 'descuento_movil_2', 'descuento_movil_3', 'descuento_movil_4', 'descuento_movil_5', 'pvp', 'codificacion', 'observaciones', 'id_codificacion', 'id_user','created_at'];
 
 
 
