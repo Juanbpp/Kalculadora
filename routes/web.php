@@ -12,6 +12,7 @@ use App\Http\Controllers\RoleController;
 use Illuminate\Support\Facades\Facade;
 
 Route::get('/', function () {return view('index');})->middleware(middleware:'auth');
+Route::get('/logout', function () {return view('index');})->middleware(middleware:'auth');
 
 Auth::routes(['register'=>false]);
 
