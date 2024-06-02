@@ -109,7 +109,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                with font-awesome or any other icon font library -->
                         <li class="nav-item">
                             <a href="#" class="nav-link active">
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <i class="nav-icon fas fa-users-alt"></i>
                                 <p>
                                     Usuario
                                     <i class="right fas fa-angle-left"></i>
@@ -136,7 +136,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                    with font-awesome or any other icon font library -->
                             <li class="nav-item">
                                 <a href="#" class="nav-link active">
-                                    <i class="nav-icon fas fa-tachometer-alt"></i>
+                                    <i class="nav-icon fas fa-tag-alt"></i>
                                     <p>
                                         Marca
                                         <i class="right fas fa-angle-left"></i>
@@ -163,7 +163,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                        with font-awesome or any other icon font library -->
                                 <li class="nav-item">
                                     <a href="#" class="nav-link active">
-                                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                                        <i class="nav-icon fas fa-flag-alt"></i>
                                         <p>
                                             Tipo producto
                                             <i class="right fas fa-angle-left"></i>
@@ -190,7 +190,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                            with font-awesome or any other icon font library -->
                                     <li class="nav-item">
                                         <a href="#" class="nav-link active">
-                                            <i class="nav-icon fas fa-tachometer-alt"></i>
+                                            <i class="nav-icon fas fa-product-alt"></i>
                                             <p>
                                                 Producto
                                                 <i class="right fas fa-angle-left"></i>
@@ -217,7 +217,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                              with font-awesome or any other icon font library -->
                                         <li class="nav-item">
                                             <a href="#" class="nav-link active">
-                                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                                <i class="nav-icon fas fa-eur-alt"></i>
                                                 <p>
                                                     Descuento
                                                     <i class="right fas fa-angle-left"></i>
@@ -244,7 +244,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                            with font-awesome or any other icon font library -->
                                             <li class="nav-item">
                                                 <a href="#" class="nav-link active">
-                                                    <i class="nav-icon fas fa-tachometer-alt"></i>
+                                                    <i class="nav-icon fas fa-star-alt"></i>
                                                     <p>
                                                         Codificacion
                                                         <i class="right fas fa-angle-left"></i>
@@ -272,7 +272,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                with font-awesome or any other icon font library -->
                                                         <li class="nav-item">
                                                             <a href="#" class="nav-link active">
-                                                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                                                <i class="nav-icon fas fa-cart-alt"></i>
                                                                 <p>
                                                                     Registro
                                                                     <i class="right fas fa-angle-left"></i>
