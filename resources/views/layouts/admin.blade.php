@@ -57,7 +57,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <a href="/jazztel" class="nav-link"><img src="{{ url('/dist/img/jazztel.png') }}"</a>
                 </li>
             </ul>
-        </nav>
             <!-- Right navbar links -->
             <ul class="navbar-nav ml-auto">
                 <!-- Navbar Search -->
