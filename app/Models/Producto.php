@@ -56,10 +56,7 @@ class Producto extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function registros()
-    {
-        return $this->hasMany(\App\Models\Registro::class, 'id', 'id_producto');
-    }
+    
     
 
 }
