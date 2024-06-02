@@ -190,7 +190,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                            with font-awesome or any other icon font library -->
                                     <li class="nav-item">
                                         <a href="#" class="nav-link active">
-                                            <i class="nav-icon fas fa-product"></i>
+                                            <i class="nav-icon fas fa-bolt"></i>
                                             <p>
                                                 Producto
                                                 <i class="right fas fa-angle-left"></i>
@@ -217,7 +217,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                              with font-awesome or any other icon font library -->
                                         <li class="nav-item">
                                             <a href="#" class="nav-link active">
-                                                <i class="nav-icon fas fa-eur"></i>
+                                                <i class="nav-icon fas fa-plane"></i>
                                                 <p>
                                                     Descuento
                                                     <i class="right fas fa-angle-left"></i>
@@ -272,7 +272,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                with font-awesome or any other icon font library -->
                                                         <li class="nav-item">
                                                             <a href="#" class="nav-link active">
-                                                                <i class="nav-icon fas fa-cart"></i>
+                                                                <i class="nav-icon fas fa-cart-arrow-down"></i>
                                                                 <p>
                                                                     Registro
                                                                     <i class="right fas fa-angle-left"></i>
