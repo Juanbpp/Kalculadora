@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('registros', function (Blueprint $table) {
             $table->id();
             $table->string('DNI')->nullable();
-            $table->integer('telefono')->nullable();
+            $table->string('telefono')->nullable();
             $table->string('impuesto');
             $table->integer('id_net')->nullable();
             $table->integer('id_convergente')->nullable();
