@@ -14,6 +14,10 @@
 <link rel="stylesheet" href="{{ Secure_asset('dist/css/adminlte.min.css?v=3.2.0') }}">
 </head>
 <body class="hold-transition login-page">
+    <div class="col">
+        <img src="{{ url('/dist/img/logo.png') }}" >
+    </div>
+    <div class="col">
 <div class="login-box">
 <div class="login-logo">
 <a href="https://kalculadora-production.up.railway.app/"><b>Kalculadora</a>
@@ -60,7 +64,7 @@ Recuerdame
 
 </div>
 </div>
-
+</div>
 
 <script src="{{ Secure_asset('plugins/jquery/jquery.min.js') }}"></script>
 
