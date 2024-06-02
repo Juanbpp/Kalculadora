@@ -38,11 +38,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
             <!-- Left navbar links -->
             <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i
-                            class="fas fa-bars"></i></a>
-                </li>
-                <li class="nav-item d-inline">
+                <li class="nav-item d-inline-block">
                     <a href="/yoigo" class="nav-link"><img src="{{ url('/dist/img/yoigo.png') }}"</a>
                 </li>
                 <li class="nav-item  d-inline-block">
@@ -82,7 +78,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <a href="{{ url('/') }}" class="brand-link">
                 <img src="{{ url('/dist/img/AdminLTELogo.png') }}" alt="AdminLTE Logo"
                     class="brand-image img-circle elevation-3" style="opacity: .8">
-                <span class="brand-text font-weight-light">Kalculator</span>
+                <span class="brand-text font-weight-light">Kalculadora</span>
             </a>
 
             <!-- Sidebar -->
