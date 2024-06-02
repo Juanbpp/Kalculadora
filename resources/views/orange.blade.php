@@ -408,10 +408,13 @@
         }else{
             texto_codificacion="\n Codificacion: "+ option_codificacion.text;    
         }    
+        var nombre= "Identificador: "+document.getElementById('DNI').value +"\n";
+        var telefono= "Telefono: "+ document.getElementById('telefono').value +"\n";
+        
         document.getElementById('id_codificacion').value = valor_codificacion;
         document.getElementById('pvp').value = importe;
-        document.getElementById('resultado2').innerHTML = t_internet + t_adicional + t_movil + " total a pagar " + importe+ texto_codificacion;
-        document.getElementById('resultado3').value = t_internet + t_adicional + t_movil + " total a pagar " + importe+ texto_codificacion;
+        document.getElementById('resultado2').innerHTML = nombre + telefono + t_internet + t_adicional + t_movil + " total a pagar " + importe+ texto_codificacion;
+        document.getElementById('resultado3').value = nombre + telefono + t_internet + t_adicional + t_movil + " total a pagar " + importe+ texto_codificacion;
         
     }
 

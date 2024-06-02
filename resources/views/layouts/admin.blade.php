@@ -40,6 +40,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <!-- Left navbar links -->
             <ul class="navbar-nav">
                 <li class="nav-item d-inline-block">
+                    <a href="#" class="nav-link"></a>
+                </li>
+                <li class="nav-item d-inline-block">
                     <a href="/yoigo" class="nav-link"><img src="{{ url('/dist/img/yoigo.png') }}"</a>
                 </li>
                 <li class="nav-item  d-inline-block">
