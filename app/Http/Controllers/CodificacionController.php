@@ -69,7 +69,7 @@ class CodificacionController extends Controller
         $codificacion->update($request->validated());
 
         return redirect()->route('codificaciones.index')
-            ->with('success', 'Codificacione updated successfully');
+            ->with('success', 'Codificacion updated successfully');
     }
 
     public function destroy($id)

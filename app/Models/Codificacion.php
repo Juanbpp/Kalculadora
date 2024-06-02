@@ -29,7 +29,7 @@ class Codificacion extends Model
      */
     protected $table = 'codificaciones';
 
-    protected $fillable = ['codificaciones'];
+    protected $fillable = ['codificacion'];
 
 
     /**
