@@ -8,7 +8,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kalculator</title>
+    <title>Kalculadora</title>
     <link rel="icon" type="image/png" sizes="16x16" href="{{ url('/dist/img/AdminLTELogo.png') }}">
 
     <!-- Google Font: Source Sans Pro -->
