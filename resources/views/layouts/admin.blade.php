@@ -37,23 +37,23 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- Navbar -->
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
             <!-- Left navbar links -->
-            <ul class="navbar-nav"><center>
-                <li class="nav-item d-inline-block">
+            <ul class="navbar-nav">
+                <li class="nav-item d-inline-block"><center>
                     <a href="/yoigo" class="nav-link"><img src="{{ url('/dist/img/yoigo.png') }}"</a>
                 </li>
-                <li class="nav-item  d-inline-block">
+                <li class="nav-item  d-inline-block"><center>
                     <a href="/masmovil" class="nav-link"><img src="{{ url('/dist/img/masmovil.png') }}"</a>
                 </li>
-                <li class="nav-item d-inline-block">
+                <li class="nav-item d-inline-block"><center>
                     <a href="/movistar" class="nav-link"><img src="{{ url('/dist/img/movistar.png') }}"</a>
                 </li>
-                <li class="nav-item  d-inline-block">
+                <li class="nav-item  d-inline-block"><center>
                     <a href="/vodafone" class="nav-link"><img src="{{ url('/dist/img/vodafone.png') }}"</a>
                 </li>
-                <li class="nav-item  d-inline-block">
+                <li class="nav-item  d-inline-block"><center>
                     <a href="/orange" class="nav-link"><img src="{{ url('/dist/img/orange.png') }}"</a>
                 </li>
-                <li class="nav-item  d-inline-block">
+                <li class="nav-item  d-inline-block"><center>
                     <a href="/jazztel" class="nav-link"><img src="{{ url('/dist/img/jazztel.png') }}"</a>
                 </li>
             </ul>
