@@ -106,9 +106,17 @@ class HomeController extends Controller
 
     public function yoigo(Request $request)
     {
+        $validated = $request->validate([
+            'DNI' => 'required',
+            'telefono' => 'required|regex:/[0-9]{9}/',
+        ]);
+
         Registro::create($request->all());
         
+
+
         if ($request->id_codificacion=="1"){
+
 
         $name= $request->DNI;
         $total= $request->pvp;
