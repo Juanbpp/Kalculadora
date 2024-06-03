@@ -16,11 +16,6 @@
                                 {{ __('Registro') }}
                             </span>
 
-                             <div class="float-right">
-                                <a href="{{ route('registros.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Crear nuevo') }}
-                                </a>
-                              </div>
                         </div>
                     </div>
                     @if ($message = Session::get('success'))

@@ -117,12 +117,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="{{ url('users/create') }}" class="nav-link active">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Nuevo usuario</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
                                     <a href="{{ url('users') }}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Listado usuario</p>
@@ -279,13 +273,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                                 </p>
                                                             </a>
                                                             <ul class="nav nav-treeview">
-                                                                <li class="nav-item">
-                                                                    <a href="{{ url('registros/create') }}"
-                                                                        class="nav-link active">
-                                                                        <i class="far fa-circle nav-icon"></i>
-                                                                        <p>Nuevo registro</p>
-                                                                    </a>
-                                                                </li>
                                                                 <li class="nav-item">
                                                                     <a href="{{ url('registros') }}"
                                                                         class="nav-link">
