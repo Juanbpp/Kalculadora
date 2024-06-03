@@ -213,11 +213,11 @@
                                   <center>
                                             <div class="card-body">
                                                 <h4 class="card"><center>Total a pagar</h4>
-                                                <p class="card-text"  id="resultado2"></p>
                                                 <input type="hidden" name="pvp" id="pvp"/> 
-                                                <input type="hidden" name="codificacion" id="resultado3"/>
+                                                <textarea name="codificacion" id="resultado3" rows="8" cols="50" disabled>
+                                                </textarea>    
                                                 <br><br>Codificacion: 
-                                                <select size="1" id="final">
+                                                <select size="1" id="final" onchange="javascript:cambio()">
                                                     <option selected value="0">Seleccione uno ...</option>
                                                     @foreach ($codificaciones as $codificacion)
                                                         <option value="{{ $codificacion->id }}">
@@ -413,8 +413,8 @@
         
         document.getElementById('id_codificacion').value = valor_codificacion;
         document.getElementById('pvp').value = importe;
-        document.getElementById('resultado2').innerHTML = nombre + telefono + t_internet + t_adicional + t_movil + " total a pagar " + importe+ texto_codificacion;
-        document.getElementById('resultado3').value = nombre + telefono + t_internet + t_adicional + t_movil + " total a pagar " + importe+ texto_codificacion;
+        document.getElementById('resultado2').innerHTML = nombre + telefono + t_internet + t_adicional + t_movil + " total a pagar " + importe + " con " + impuesto +" "+ texto_codificacion;
+        document.getElementById('resultado3').value = nombre + telefono + t_internet + t_adicional + t_movil + " total a pagar " + importe +" con " + impuesto +" "+ texto_codificacion;
         
     }
 
@@ -449,8 +449,4 @@
     }
 
 
-    /*    var select = $('select[id^=movil]');
-               var count = select.length;
-               alert(count);
-    */
 </script>

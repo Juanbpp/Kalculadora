@@ -213,12 +213,11 @@
                                   <center>
                                             <div class="card-body">
                                                 <h4 class="card"><center>Total a pagar</h4>
-                                                <p class="card-text"  id="resultado2"></p>
                                                 <input type="hidden" name="pvp" id="pvp"/> 
-                                                <textarea name="codificacion" id="resultado3" rows="6" cols="50" disabled>
+                                                <textarea name="codificacion" id="resultado3" rows="8" cols="50" disabled>
                                                 </textarea>    
                                                 <br><br>Codificacion: 
-                                                <select size="1" id="final">
+                                                <select size="1" id="final" onchange="javascript:cambio()">
                                                     <option selected value="0">Seleccione uno ...</option>
                                                     @foreach ($codificaciones as $codificacion)
                                                         <option value="{{ $codificacion->id }}">
