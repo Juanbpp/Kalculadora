@@ -215,7 +215,8 @@
                                                 <h4 class="card"><center>Total a pagar</h4>
                                                 <p class="card-text"  id="resultado2"></p>
                                                 <input type="hidden" name="pvp" id="pvp"/> 
-                                                <textarea name="codificacion" id="resultado3" rows="6" cols="50" disabled/>
+                                                <textarea name="codificacion" id="resultado3" rows="6" cols="50" disabled>
+                                                </textarea>    
                                                 <br><br>Codificacion: 
                                                 <select size="1" id="final">
                                                     <option selected value="0">Seleccione uno ...</option>
