@@ -21,25 +21,6 @@ class UserController extends Controller
         return view('user.index', compact('users'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        $user = new User();
-        return view('user.create', compact('user'));
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(UserRequest $request)
-    {
-        User::create($request->validated());
-
-        return redirect()->route('users.index')
-            ->with('success', 'User created successfully.');
-    }
 
     /**
      * Display the specified resource.
