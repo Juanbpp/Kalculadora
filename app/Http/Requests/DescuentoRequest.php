@@ -24,7 +24,7 @@ class DescuentoRequest extends FormRequest
         return [
 			'tipo' => 'required',
 			'descuento' => 'required|string',
-			'precio' => 'required',
+			'importe' => 'required',
 	   ];
     }
 }

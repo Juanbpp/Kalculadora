@@ -29,7 +29,7 @@ class Descuento extends Model
      *
      * @var array
      */
-    protected $fillable = ['tipo', 'descuento', 'precio'];
+    protected $fillable = ['tipo', 'descuento', 'importe'];
 
 
     /**

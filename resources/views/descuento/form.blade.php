@@ -12,7 +12,7 @@
             {!! $errors->first('descuento', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
         <div class="form-group mb-2 mb20">
-            <label for="precio" class="form-label">{{ __('Precio') }}</label>
+            <label for="importe" class="form-label">{{ __('importe') }}</label>
             <input type="text" name="importe" class="form-control @error('importe') is-invalid @enderror" value="{{ old('importe', $descuento?->importe) }}" id="importe" placeholder="importe">
             {!! $errors->first('importe', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
