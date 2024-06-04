@@ -13,7 +13,7 @@
         </div>
         <div class="form-group mb-2 mb20">
             <label for="password" class="form-label">{{ __('password') }}</label>
-            <input type="text" name="password" class="form-control @error('password') is-invalid @enderror" value="{{ old('password', $user?->password) }}" id="password" placeholder="password">
+            <input type="text" name="password" class="form-control @error('password') is-invalid @enderror" value="" id="password" placeholder="password">
             {!! $errors->first('password', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
 
