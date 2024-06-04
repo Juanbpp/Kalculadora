@@ -41,7 +41,7 @@ class UserController extends Controller
         'password' => Hash::make($request['password']),
         ]);
 
-        return redirect()->route('user.index')
+        return redirect()->route('users.index')
             ->with('success', 'Tipo created successfully.');
     }
 
