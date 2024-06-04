@@ -19,15 +19,15 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::all();;
+        $user = User::all();;
 
-        return view('user.index', compact('users'));
+        return view('user.index', compact('user'));
     }
 
     public function create()
-    {
-        $users = new User();
-        return view('user.create', compact('users'));
+    { 
+        $user = new User();
+        return view('user.create', compact('user'));
     }
 
     /**
