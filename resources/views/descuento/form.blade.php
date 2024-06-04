@@ -4,7 +4,7 @@
         <div class="form-group mb-2 mb20">
             <label for="tipo" class="form-label">{{ __('Tipo') }}</label>
             <select name="tipo" id="tipo">
-                <option value="">Select</option>
+                <option value="">Seleccionar</option>
                 <option {{ $descuento?->tipo == 'entero' ? 'selected':'' }}>Entero</option>
                 <option {{ $descuento?->tipo == 'porcentaje' ? 'selected':'' }}>Porcentaje</option>
             </select>

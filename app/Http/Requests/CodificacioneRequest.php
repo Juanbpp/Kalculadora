@@ -22,7 +22,7 @@ class CodificacioneRequest extends FormRequest
     public function rules(): array
     {
         return [
-			'codificaciones' => 'required|string',
+			'codificacion' => 'required|string',
         ];
     }
 }
