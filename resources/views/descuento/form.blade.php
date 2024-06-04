@@ -3,8 +3,11 @@
         
         <div class="form-group mb-2 mb20">
             <label for="tipo" class="form-label">{{ __('Tipo') }}</label>
-            <input type="text" name="tipo" class="form-control @error('tipo') is-invalid @enderror" value="{{ old('tipo', $descuento?->tipo) }}" id="tipo" placeholder="Tipo">
-            {!! $errors->first('tipo', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
+            <select name="tipo" id="tipo">
+                <option value="">Select</option>
+                <option {{ $descuento?->tipo == 'entero' ? 'selected':'' }}>Entero</option>
+                <option {{ $descuento?->tipo == 'porcentaje' ? 'selected':'' }}>Porcentaje</option>
+            </select>
         </div>
         <div class="form-group mb-2 mb20">
             <label for="descuento" class="form-label">{{ __('Descuento') }}</label>
