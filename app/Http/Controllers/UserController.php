@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Http\Requests\UserRequest;
+use Illuminate\Support\Facades\Hash;
+
+
 
 /**
  * Class UserController
@@ -19,6 +22,27 @@ class UserController extends Controller
         $users = User::all();;
 
         return view('user.index', compact('users'));
+    }
+
+    public function create()
+    {
+        $users = new User();
+        return view('user.create', compact('users'));
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(UserRequest $request)
+    {
+        User::create([
+        'name' => $request['name'],
+        'email' => $request['email'],
+        'password' => Hash::make($request['password']),
+        ]);
+
+        return redirect()->route('user.index')
+            ->with('success', 'Tipo created successfully.');
     }
 
 
