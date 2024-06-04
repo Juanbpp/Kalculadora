@@ -25,8 +25,6 @@ class DescuentoRequest extends FormRequest
 			'tipo' => 'required',
 			'descuento' => 'required|string',
 			'precio' => 'required',
-			'fecha_inicio' => 'required',
-			'fecha_fin' => 'required',
-        ];
+	   ];
     }
 }

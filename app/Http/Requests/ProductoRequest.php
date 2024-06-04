@@ -26,8 +26,6 @@ class ProductoRequest extends FormRequest
 			'id_tipo' => 'required',
 			'producto' => 'required|string',
 			'precio' => 'required',
-			'fecha_inicio' => 'required',
-			'fecha_fin' => 'required',
         ];
     }
 }
