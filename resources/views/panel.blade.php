@@ -11,8 +11,15 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">{{ __('Update') }} User</span>
+                        <span class="card-title">{{ __('Update') }} Mi panel</span>
                     </div>
+                </div>
+                @if ($message = Session::get('success'))
+                    <div class="alert alert-success m-4">
+                        <p>{{ $message }}</p>
+                    </div>
+                @endif
+
                     <div class="card-body bg-white">
                         <form method="POST" action="{{ route('panel') }}"  role="form" enctype="multipart/form-data">
                             @csrf
