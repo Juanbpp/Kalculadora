@@ -11,7 +11,7 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">{{ __('Update') }} Mi panel</span>
+                        <span class="card-title">Mi panel</span>
                     </div>
                 </div>
                 @if ($message = Session::get('success'))
@@ -45,6 +45,7 @@
                                 </div>
                                 <div class="col-md-12 mt20 mt-2">
                                     <button type="submit" class="btn btn-primary">{{ __('Actualizar') }}</button>
+                                    <a href="https://kalculadora-production.up.railway.app/" class="btn btn-danger">Volver</a>
                                 </div>
                             </div>
 
