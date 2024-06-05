@@ -303,7 +303,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                     </ul>
                                                     <br>
     <center>
-        <a href="/jazztel">      <img src="{{ url('/dist/img/logo.png') }}" width="80%"></a>
+        <a href="https://kalculadora-production.up.railway.app">      <img src="{{ url('/dist/img/logo.png') }}" width="80%"></a>
                 </nav>
                 <!-- /.sidebar-menu -->
             </div>
