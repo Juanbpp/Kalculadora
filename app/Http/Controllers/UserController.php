@@ -91,11 +91,8 @@ class UserController extends Controller
         $userId=Auth::id();
         $user = User::findOrFail($userId);    
         $request->validated();
-        $user->fill([
-            'name' => $request['name'],
-            'email' => $request['email'],
-            'password' => Hash::make($request['password']),
-        ]);
+        $user->update($request->validated());
+
         return redirect()->route('panel')
             ->with('success', 'User updated successfully');
     }
