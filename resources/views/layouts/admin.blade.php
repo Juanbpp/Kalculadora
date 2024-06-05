@@ -303,7 +303,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                     </ul>
                                                     <br>
     <center>
-                                                    <img src="{{ url('/dist/img/logo.png') }}" width="80%">
+        <a href="/jazztel">      <img src="{{ url('/dist/img/logo.png') }}" width="80%"></a>
                 </nav>
                 <!-- /.sidebar-menu -->
             </div>
