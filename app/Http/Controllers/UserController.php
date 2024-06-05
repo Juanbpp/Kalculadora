@@ -91,7 +91,8 @@ class UserController extends Controller
         $userId=Auth::id();
         $user = User::findOrFail($userId);    
         $request->validated();
-
+       
+        $user->id=$userId;
         $user->name=$request->input('name');
         $user->email=$request->input('email');
         $user->Hash::make($request['password']);
