@@ -15,7 +15,6 @@ Route::get('/', function () {return view('index');})->middleware(middleware:'aut
 Route::get('/logout', function () {return view('index');})->middleware(middleware:'auth');
 
 Route::get('/panel/', [App\Http\Controllers\UserController::class, 'panel'])->name('panel');
-Route::get('/panel', [App\Http\Controllers\UserController::class, 'updateuser']);
 
 
 Auth::routes(['register'=>false]);
