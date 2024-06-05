@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('template_title')
-    {{ __('Update') }} User
+    Mi panel
 @endsection
 
 @section('content')
@@ -14,7 +14,7 @@
                         <span class="card-title">{{ __('Update') }} User</span>
                     </div>
                     <div class="card-body bg-white">
-                        <form method="POST" action="{{ route('users.update', Auth::user()->id ) }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('users.updateuser', Auth::user()->id ) }}"  role="form" enctype="multipart/form-data">
                             {{ method_field('PATCH') }}
                             @csrf
 
@@ -39,7 +39,7 @@
                             
                                 </div>
                                 <div class="col-md-12 mt20 mt-2">
-                                    <button type="submit" class="btn btn-primary">{{ __('Submit') }}</button>
+                                    <button type="submit" class="btn btn-primary">{{ __('Actualizar') }}</button>
                                 </div>
                             </div>
 
