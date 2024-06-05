@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Http\Requests\UserRequest;
 use Illuminate\Support\Facades\Hash;
-
+use Illuminate\Support\Facades\Facade;
 
 
 /**
@@ -85,9 +85,9 @@ class UserController extends Controller
             ->with('success', 'User deleted successfully');
     }
 
-    public function updateuser(UserRequest $request, User $user)
+    public function updateuser(UserRequest $request)
     {
-        $user->update($request->validated());
+        Auth->user()->update($request->validated());
 
         return redirect()->route('panel')
             ->with('success', 'User updated successfully');

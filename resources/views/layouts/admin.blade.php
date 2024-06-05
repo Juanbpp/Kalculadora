@@ -94,7 +94,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="/panel/{{ Auth::user()->id }}" class="d-block">{{ Auth::user()->name }}</a>
+                        <a href="/panel" class="d-block">{{ Auth::user()->name }}</a>
                     </div>
                 </div>
 
