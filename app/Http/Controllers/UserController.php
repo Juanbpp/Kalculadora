@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Http\Requests\UserRequest;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Facade;
+use Illuminate\Support\Facades\Auth;
 
 
 /**
@@ -87,8 +88,14 @@ class UserController extends Controller
 
     public function updateuser(UserRequest $request)
     {
-        Auth->user()->update($request->validated());
-
+        $userId=Auth::id();
+        $user = User::findOrFail($userId);    
+        $request->validated();
+        $user->fill([
+            'name' => $request['name'],
+            'email' => $request['email'],
+            'password' => Hash::make($request['password']),
+        ]);
         return redirect()->route('panel')
             ->with('success', 'User updated successfully');
     }
