@@ -15,7 +15,6 @@
                     </div>
                     <div class="card-body bg-white">
                         <form method="POST" action="{{ route('panel', Auth::user()->id) }}"  role="form" enctype="multipart/form-data">
-                            {{ method_field('PATCH') }}
                             @csrf
 
                             <div class="row padding-1 p-1">
