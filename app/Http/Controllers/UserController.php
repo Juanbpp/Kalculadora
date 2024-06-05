@@ -95,7 +95,7 @@ class UserController extends Controller
         $user->id=$userId;
         $user->name=$request->input('name');
         $user->email=$request->input('email');
-        $user->Hash::make($request['password']);
+        $user->password=Hash::make($request->input('password'));
         $user->save();
 
         return redirect()->route('panel')
