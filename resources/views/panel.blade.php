@@ -14,7 +14,7 @@
                         <span class="card-title">{{ __('Update') }} User</span>
                     </div>
                     <div class="card-body bg-white">
-                        <form method="POST" action="{{ action('App\Http\Controllers\UserController@updateuser') }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ action('App\Http\Controllers\UserController@updateuser'),$user->id }}"  role="form" enctype="multipart/form-data">
                             {{ method_field('PATCH') }}
                             @csrf
 
