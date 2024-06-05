@@ -17,7 +17,6 @@ Route::get('/logout', function () {return view('index');})->middleware(middlewar
 Route::get('/panel/', [App\Http\Controllers\UserController::class, 'panel'])->name('panel');
 Route::patch('/panel/{id}', [App\Http\Controllers\UserController::class, 'updateuser']);
 
-
 Auth::routes(['register'=>false]);
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
