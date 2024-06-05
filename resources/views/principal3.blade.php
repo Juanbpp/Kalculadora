@@ -413,7 +413,6 @@
         
         document.getElementById('id_codificacion').value = valor_codificacion;
         document.getElementById('pvp').value = importe;
-        document.getElementById('resultado2').innerHTML = nombre + telefono + t_internet + t_adicional + t_movil + " total a pagar " + importe + " con " + impuesto +" "+ texto_codificacion;
         document.getElementById('resultado3').value = nombre + telefono + t_internet + t_adicional + t_movil + " total a pagar " + importe +" con " + impuesto +" "+ texto_codificacion;
         
     }
