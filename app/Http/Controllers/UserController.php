@@ -43,7 +43,7 @@ class UserController extends Controller
         ]);
 
         return redirect()->route('users.index')
-            ->with('success', 'Tipo created successfully.');
+            ->with('success', 'Usuario creado correcto.');
     }
 
 
@@ -75,7 +75,7 @@ class UserController extends Controller
         $user->update($request->validated());
 
         return redirect()->route('users.index')
-            ->with('success', 'User updated successfully');
+            ->with('success', 'Usuario actualizado correctamente');
     }
 
     public function destroy($id)
@@ -83,7 +83,7 @@ class UserController extends Controller
         User::find($id)->delete();
 
         return redirect()->route('users.index')
-            ->with('success', 'User deleted successfully');
+            ->with('success', 'Usuario borrado correctamente');
     }
 
     public function updateuser(UserRequest $request)
@@ -99,7 +99,7 @@ class UserController extends Controller
         $user->save();
 
         return redirect()->route('panel')
-            ->with('success', 'User updated successfully');
+            ->with('success', 'Usuario actualizado correctamente');
     }
     public function panel()
     {

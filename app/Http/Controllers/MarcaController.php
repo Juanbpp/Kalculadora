@@ -38,7 +38,7 @@ class MarcaController extends Controller
         Marca::create($request->validated());
 
         return redirect()->route('marcas.index')
-            ->with('success', 'Marca created successfully.');
+            ->with('success', 'Marca creada correcta.');
     }
 
     /**
@@ -69,7 +69,7 @@ class MarcaController extends Controller
         $marca->update($request->validated());
 
         return redirect()->route('marcas.index')
-            ->with('success', 'Marca updated successfully');
+            ->with('success', 'Marca actualizada correctamente');
     }
 
     public function destroy($id)
@@ -77,6 +77,6 @@ class MarcaController extends Controller
         Marca::find($id)->delete();
 
         return redirect()->route('marcas.index')
-            ->with('success', 'Marca deleted successfully');
+            ->with('success', 'Marca borrado correctamente');
     }
 }

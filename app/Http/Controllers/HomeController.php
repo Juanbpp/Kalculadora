@@ -119,7 +119,7 @@ class HomeController extends Controller
         $redsys->index($name, $total, false, $description);
         }else{
             return redirect()->route('principal2')
-            ->with('success', 'Registro created successfully.');
+            ->with('success', 'Registro creado correcto.');
        }
     }
        public function masmovil(Request $request)
@@ -136,7 +136,7 @@ class HomeController extends Controller
         $redsys->index($name, $total, false, $description);
         }else{
             return redirect()->route('principal3')
-            ->with('success', 'Registro created successfully.');
+            ->with('success', 'Registro creado correcto.');
           }
    
         }
@@ -154,7 +154,7 @@ class HomeController extends Controller
          $redsys->index($name, $total, false, $description);
          }else{
              return redirect()->route('movistar')
-             ->with('success', 'Registro created successfully.');
+             ->with('success', 'Registro creado correcto.');
            }
     
          }
@@ -172,7 +172,7 @@ class HomeController extends Controller
           $redsys->index($name, $total, false, $description);
           }else{
               return redirect()->route('vodafone')
-              ->with('success', 'Registro created successfully.');
+              ->with('success', 'Registro creado correcto.');
             }
      
           }
@@ -190,7 +190,7 @@ class HomeController extends Controller
            $redsys->index($name, $total, false, $description);
            }else{
                return redirect()->route('orange')
-               ->with('success', 'Registro created successfully.');
+               ->with('success', 'Registro creado correcto.');
              }
       
            }
@@ -208,7 +208,7 @@ class HomeController extends Controller
             $redsys->index($name, $total, false, $description);
             }else{
                 return redirect()->route('jazztel')
-                ->with('success', 'Registro created successfully.');
+                ->with('success', 'Registro creado correcto.');
               }
        
             }

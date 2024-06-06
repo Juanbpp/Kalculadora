@@ -38,7 +38,7 @@ class CodificacionController extends Controller
         Codificacion::create($request->validated());
 
         return redirect()->route('codificaciones.index')
-            ->with('success', 'Codificacion created successfully.');
+            ->with('success', 'Codificacion creado correcto.');
     }
 
     /**
@@ -69,7 +69,7 @@ class CodificacionController extends Controller
         $codificacion->update($request->validated());
 
         return redirect()->route('codificaciones.index')
-            ->with('success', 'Codificacion updated successfully');
+            ->with('success', 'Codificacion actualizado correctamente');
     }
 
     public function destroy($id)
@@ -77,6 +77,6 @@ class CodificacionController extends Controller
         Codificacion::find($id)->delete();
 
         return redirect()->route('codificaciones.index')
-            ->with('success', 'Codificacion deleted successfully');
+            ->with('success', 'Codificacion borrado correctamente');
     }
 }

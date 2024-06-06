@@ -38,7 +38,7 @@ class RegistroController extends Controller
         Registro::create($request->validated());
 
         return redirect()->route('registros.index')
-            ->with('success', 'Registro created successfully.');
+            ->with('success', 'Registro creado correcto.');
     }
 
     /**
@@ -69,7 +69,7 @@ class RegistroController extends Controller
         $registro->update($request->validated());
 
         return redirect()->route('registros.index')
-            ->with('success', 'Registro updated successfully');
+            ->with('success', 'Registro actualizado correctamente');
     }
 
     public function destroy($id)
@@ -77,6 +77,6 @@ class RegistroController extends Controller
         Registro::find($id)->delete();
 
         return redirect()->route('registros.index')
-            ->with('success', 'Registro deleted successfully');
+            ->with('success', 'Registro borrado correctamente');
     }
 }

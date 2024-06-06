@@ -38,7 +38,7 @@ class DescuentoController extends Controller
         Descuento::create($request->validated());
 
         return redirect()->route('descuentos.index')
-            ->with('success', 'Descuento created successfully.');
+            ->with('success', 'Descuento creado correcto.');
     }
 
     /**
@@ -69,7 +69,7 @@ class DescuentoController extends Controller
         $descuento->update($request->validated());
 
         return redirect()->route('descuentos.index')
-            ->with('success', 'Descuento updated successfully');
+            ->with('success', 'Descuento actualizado correctamente');
     }
 
     public function destroy($id)
@@ -77,6 +77,6 @@ class DescuentoController extends Controller
         Descuento::find($id)->delete();
 
         return redirect()->route('descuentos.index')
-            ->with('success', 'Descuento deleted successfully');
+            ->with('success', 'Descuento borrado correctamente');
     }
 }
