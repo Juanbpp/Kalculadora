@@ -69,7 +69,7 @@
     
                         <div class="card-body bg-white">
                             <div class="table-responsive">
-                                <table>
+                                <table id="example2" class="table table-bordered table-hover">
                                     <thead class="thead">
                                         <tr>
                                             <th>No</th>
@@ -107,7 +107,19 @@
                     </div>
                 </div>
             </div>
-        
+            <script>
+                $(function () {
+                  $('#example2').DataTable({
+                    "paging": false,
+                    "lengthChange": false,
+                    "searching": false,
+                    "ordering": true,
+                    "info": true,
+                    "autoWidth": false,
+                    "responsive": true,
+                  });
+                });
+              </script>
     
     </section>
 @endsection
