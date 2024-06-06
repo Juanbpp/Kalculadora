@@ -61,7 +61,7 @@
                             <div style="display: flex; justify-content: space-between; align-items: center;">
     
                                 <span id="card_title">
-                                    {{ __('Registro') }}
+                                    {{ __('Mis registros') }}
                                 </span>
     
                             </div>
@@ -111,7 +111,6 @@
         <script>
             $(function () {
                                     $("#example1").DataTable({
-                                        "pageLength": 10,
                                         "language": {
                                             "emptyTable": "No hay información",
                                             "info": "Mostrando _START_ a _END_ de _TOTAL_ ",
@@ -119,15 +118,8 @@
                                             "infoFiltered": "(Filtrado de _MAX_ total)",
                                             "infoPostFix": "",
                                             "thousands": ",",
-                                            "lengthMenu": "Mostrar _MENU_ ",
                                             "loadingRecords": "Cargando...",
                                             "processing": "Procesando...",
-                                            "paginate": {
-                                                "first": "Primero",
-                                                "last": "Ultimo",
-                                                "next": "Siguiente",
-                                                "previous": "Anterior"
-                                            }
                                         },
                                         "responsive": true, "lengthChange": true, "autoWidth": false,
                                         buttons: [
