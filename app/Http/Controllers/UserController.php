@@ -106,7 +106,7 @@ class UserController extends Controller
         $registros = Registro::all()
                         ->where('id_user',Auth::id())
                         ->sortByDesc("created_at")
-                        ->limit(5);
+                        ->take(5);
 
                         return view('panel', compact('registros'));
     }
