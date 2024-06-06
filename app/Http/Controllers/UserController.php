@@ -103,7 +103,11 @@ class UserController extends Controller
     }
     public function panel()
     {
-        $registros = Registro::all();
+        $registros = Registro::all()
+                        ->where('id_user',Auth::id())
+                        ->orderBy('created_at', 'desc')
+                        ->limit(5);
+
 
         return view('panel', compact('registros'));
     }
