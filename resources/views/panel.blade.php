@@ -69,7 +69,7 @@
     
                         <div class="card-body bg-white">
                             <div class="table-responsive">
-                                <table id="example1" class="table table-bordered table-striped">
+                                <table>
                                     <thead class="thead">
                                         <tr>
                                             <th>No</th>
@@ -108,22 +108,6 @@
                 </div>
             </div>
         
-        <script>
-            $(function () {
-                                    $("#example1").DataTable({
-                                        "responsive": true, "lengthChange": true, "autoWidth": false,
-                                        buttons: [
-                                            {
-                                                extend: 'colvis',
-                                                text: 'Visor de columnas',
-                                            }
-                                        ],
-                                    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-                                });      </script>
     
-    
-
-            
-        
     </section>
 @endsection
