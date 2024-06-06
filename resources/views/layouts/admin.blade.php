@@ -45,20 +45,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     
                 <li class="nav-item d-inline-block">
                     <a href="/yoigo" class="nav-link"><img src="{{ url('/dist/img/yoigo.png') }}"</a>
-                </li>
-                <li class="nav-item  d-inline-block">
                     <a href="/masmovil" class="nav-link"><img src="{{ url('/dist/img/masmovil.png') }}"</a>
-                </li>
-                <li class="nav-item d-inline-block">
                     <a href="/movistar" class="nav-link"><img src="{{ url('/dist/img/movistar.png') }}"</a>
-                </li>
-                <li class="nav-item  d-inline-block">
                     <a href="/vodafone" class="nav-link"><img src="{{ url('/dist/img/vodafone.png') }}"</a>
-                </li>
-                <li class="nav-item  d-inline-block">
                     <a href="/orange" class="nav-link"><img src="{{ url('/dist/img/orange.png') }}"</a>
-                </li>
-                <li class="nav-item  d-inline-block">
                     <a href="/jazztel" class="nav-link"><img src="{{ url('/dist/img/jazztel.png') }}"</a>
                 </li>
             </ul>
