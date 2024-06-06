@@ -122,8 +122,6 @@
                                             "lengthMenu": "Mostrar _MENU_ ",
                                             "loadingRecords": "Cargando...",
                                             "processing": "Procesando...",
-                                            "search": "Buscador:",
-                                            "zeroRecords": "Sin resultados encontrados",
                                             "paginate": {
                                                 "first": "Primero",
                                                 "last": "Ultimo",

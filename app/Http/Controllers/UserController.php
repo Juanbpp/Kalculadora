@@ -103,11 +103,10 @@ class UserController extends Controller
     }
     public function panel()
     {
-        $registros = Registro::all()
+        $registros = Registro::select('DNI','telefono','impuesto','pvp','codificacion','observaciones','id_codificacion','created_at')
                         ->where('id_user',Auth::id())
                         ->orderBy('created_at', 'desc')
                         ->limit(5);
-
 
         return view('panel', compact('registros'));
     }
