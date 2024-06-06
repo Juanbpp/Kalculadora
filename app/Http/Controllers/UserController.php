@@ -7,7 +7,7 @@ use App\Http\Requests\UserRequest;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Facade;
 use Illuminate\Support\Facades\Auth;
-
+use App\Models\Registro;
 
 /**
  * Class UserController
@@ -103,7 +103,8 @@ class UserController extends Controller
     }
     public function panel()
     {
- 
-        return view('panel');
+        $registros = Registro::all();
+
+        return view('panel', compact('registros'));
     }
 }
