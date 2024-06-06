@@ -44,12 +44,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </li>
                     
                 <li class="nav-item d-inline-block">
-                    <a href="/yoigo" class="nav-link"><img src="{{ url('/dist/img/yoigo.png') }}"</a>
-                    <a href="/masmovil" class="nav-link"><img src="{{ url('/dist/img/masmovil.png') }}"</a>
-                    <a href="/movistar" class="nav-link"><img src="{{ url('/dist/img/movistar.png') }}"</a>
-                    <a href="/vodafone" class="nav-link"><img src="{{ url('/dist/img/vodafone.png') }}"</a>
-                    <a href="/orange" class="nav-link"><img src="{{ url('/dist/img/orange.png') }}"</a>
-                    <a href="/jazztel" class="nav-link"><img src="{{ url('/dist/img/jazztel.png') }}"</a>
+                    <a href="/yoigo" ><img src="{{ url('/dist/img/yoigo.png') }}"</a>
+                    <a href="/masmovil" ><img src="{{ url('/dist/img/masmovil.png') }}"</a>
+                    <a href="/movistar" ><img src="{{ url('/dist/img/movistar.png') }}"</a>
+                    <a href="/vodafone" ><img src="{{ url('/dist/img/vodafone.png') }}"</a>
+                    <a href="/orange" ><img src="{{ url('/dist/img/orange.png') }}"</a>
+                    <a href="/jazztel" ><img src="{{ url('/dist/img/jazztel.png') }}"</a>
                 </li>
             </ul>
             <!-- Right navbar links -->
