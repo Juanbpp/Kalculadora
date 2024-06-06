@@ -6,7 +6,7 @@
 
 @section('content')
     <section class="content container-fluid">
-        <div class="">
+        <div class="row">
             <div class="col-md-12">
 
                 <div class="card card-default">
@@ -53,7 +53,7 @@
                     </div>
                 </div>
             </div>
-
+            
             <div class="row">
                 <div class="col-sm-12">
                     <div class="card">
@@ -66,11 +66,6 @@
     
                             </div>
                         </div>
-                        @if ($message = Session::get('success'))
-                            <div class="alert alert-success m-4">
-                                <p>{{ $message }}</p>
-                            </div>
-                        @endif
     
                         <div class="card-body bg-white">
                             <div class="table-responsive">
@@ -82,43 +77,12 @@
                                             <th>Dni</th>
                                             <th>Telefono</th>
                                             <th>Impuesto</th>
-                                            <th>Id Net</th>
-                                            <th>Id Convergente</th>
-                                            <th>Id Tv</th>
-                                            <th>Id Descuento</th>
-                                            <th>Id Adicional 1</th>
-                                            <th>Id Adicional 2</th>
-                                            <th>Id Adicional 3</th>
-                                            <th>Id Adicional 4</th>
-                                            <th>Id Adicional 5</th>
-                                            <th>Cantidad Adicional 1</th>
-                                            <th>Cantidad Adicional 2</th>
-                                            <th>Cantidad Adicional 3</th>
-                                            <th>Cantidad Adicional 4</th>
-                                            <th>Cantidad Adicional 5</th>
-                                            <th>Id Movil 1</th>
-                                            <th>Id Movil 2</th>
-                                            <th>Id Movil 3</th>
-                                            <th>Id Movil 4</th>
-                                            <th>Id Movil 5</th>
-                                            <th>Cantidad Movil 1</th>
-                                            <th>Cantidad Movil 2</th>
-                                            <th>Cantidad Movil 3</th>
-                                            <th>Cantidad Movil 4</th>
-                                            <th>Cantidad Movil 5</th>
-                                            <th>Descuento Movil 1</th>
-                                            <th>Descuento Movil 2</th>
-                                            <th>Descuento Movil 3</th>
-                                            <th>Descuento Movil 4</th>
-                                            <th>Descuento Movil 5</th>
                                             <th>Pvp</th>
                                             <th>Codificacion</th>
                                             <th>Observaciones</th>
                                             <th>Id Codificacion</th>
-                                            <th>Id User</th>
                                             <th>Creado</th>
     
-                                            <th></th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -129,49 +93,12 @@
                                                 <td>{{ $registro->DNI }}</td>
                                                 <td>{{ $registro->telefono }}</td>
                                                 <td>{{ $registro->impuesto }}</td>
-                                                <td>{{ $registro->id_net }}</td>
-                                                <td>{{ $registro->id_convergente }}</td>
-                                                <td>{{ $registro->id_tv }}</td>
-                                                <td>{{ $registro->id_descuento }}</td>
-                                                <td>{{ $registro->id_adicional_1 }}</td>
-                                                <td>{{ $registro->id_adicional_2 }}</td>
-                                                <td>{{ $registro->id_adicional_3 }}</td>
-                                                <td>{{ $registro->id_adicional_4 }}</td>
-                                                <td>{{ $registro->id_adicional_5 }}</td>
-                                                <td>{{ $registro->cantidad_adicional_1 }}</td>
-                                                <td>{{ $registro->cantidad_adicional_2 }}</td>
-                                                <td>{{ $registro->cantidad_adicional_3 }}</td>
-                                                <td>{{ $registro->cantidad_adicional_4 }}</td>
-                                                <td>{{ $registro->cantidad_adicional_5 }}</td>
-                                                <td>{{ $registro->id_movil_1 }}</td>
-                                                <td>{{ $registro->id_movil_2 }}</td>
-                                                <td>{{ $registro->id_movil_3 }}</td>
-                                                <td>{{ $registro->id_movil_4 }}</td>
-                                                <td>{{ $registro->id_movil_5 }}</td>
-                                                <td>{{ $registro->cantidad_movil_1 }}</td>
-                                                <td>{{ $registro->cantidad_movil_2 }}</td>
-                                                <td>{{ $registro->cantidad_movil_3 }}</td>
-                                                <td>{{ $registro->cantidad_movil_4 }}</td>
-                                                <td>{{ $registro->cantidad_movil_5 }}</td>
-                                                <td>{{ $registro->descuento_movil_1 }}</td>
-                                                <td>{{ $registro->descuento_movil_2 }}</td>
-                                                <td>{{ $registro->descuento_movil_3 }}</td>
-                                                <td>{{ $registro->descuento_movil_4 }}</td>
-                                                <td>{{ $registro->descuento_movil_5 }}</td>
                                                 <td>{{ $registro->pvp }}</td>
                                                 <td>{{ $registro->codificacion }}</td>
                                                 <td>{{ $registro->observaciones }}</td>
                                                 <td>{{ $registro->id_codificacion }}</td>
-                                                <td>{{ $registro->id_user }}</td>
                                                 <td>{{ $registro->created_at }}</td>
     
-                                                <td>
-                                                    <form action="{{ route('registros.destroy',$registro->id) }}" method="POST">
-                                                        <a class="btn btn-sm btn-primary " href="{{ route('registros.show',$registro->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Mostrar') }}</a>
-                                                        <a class="btn btn-sm btn-success" href="{{ route('registros.edit',$registro->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Editar') }}</a>
-                                                        @csrf
-                                                    </form>
-                                                </td>
                                             </tr>
                                         @endforeach
                                     </tbody>
@@ -180,7 +107,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        
         <script>
             $(function () {
                                     $("#example1").DataTable({
@@ -205,25 +132,7 @@
                                             }
                                         },
                                         "responsive": true, "lengthChange": true, "autoWidth": false,
-                                        buttons: [{
-                                            extend: 'collection',
-                                            text: 'Reportes',
-                                            orientation: 'landscape',
-                                            buttons: [{
-                                                text: 'Copiar',
-                                                extend: 'copy',
-                                            }, {
-                                                extend: 'pdf'
-                                            },{
-                                                extend: 'csv'
-                                            },{
-                                                extend: 'excel'
-                                            },{
-                                                text: 'Imprimir',
-                                                extend: 'print'
-                                            }
-                                            ]
-                                        },
+                                        buttons: [
                                             {
                                                 extend: 'colvis',
                                                 text: 'Visor de columnas',
@@ -235,6 +144,6 @@
     
 
             
-        </div>
+        
     </section>
 @endsection
