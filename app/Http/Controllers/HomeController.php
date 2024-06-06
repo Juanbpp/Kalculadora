@@ -8,6 +8,7 @@ use App\Models\Codificacion;
 use App\Models\Descuento;
 use App\Models\Registro;
 use App\Http\Controllers\RedsysController;
+use App\Http\Requests\RegistroRequest;
 
 class HomeController extends Controller
 {
@@ -104,8 +105,9 @@ class HomeController extends Controller
         return view('jazztel',compact('descuentos','productosnet','productosconvergente','productostv','productosadicionales','productosmoviles','codificaciones'));
     }
 
-    public function yoigo(Request $request)
+    public function yoigo(RegistroRequest $request)
     {
+        $request->validated();
         Registro::create($request->all());
 
         if ($request->id_codificacion=="1"){
@@ -122,8 +124,9 @@ class HomeController extends Controller
             ->with('success', 'Registro creado correcto.');
        }
     }
-       public function masmovil(Request $request)
+       public function masmovil(RegistroRequest $request)
        {
+        $request->validated();
         Registro::create($request->all());
         
         if ($request->id_codificacion=="1"){
@@ -140,9 +143,10 @@ class HomeController extends Controller
           }
    
         }
-        public function movistarpago(Request $request)
+        public function movistarpago(RegistroRequest $request)
         {
-         Registro::create($request->all());
+            $request->validated();
+            Registro::create($request->all());
          
          if ($request->id_codificacion=="1"){
  
@@ -158,9 +162,10 @@ class HomeController extends Controller
            }
     
          }
-         public function vodafonepago(Request $request)
+         public function vodafonepago(RegistroRequest $request)
          {
-          Registro::create($request->all());
+            $request->validated();
+            Registro::create($request->all());
           
           if ($request->id_codificacion=="1"){
   
@@ -176,9 +181,10 @@ class HomeController extends Controller
             }
      
           }
-          public function orangepago(Request $request)
+          public function orangepago(RegistroRequest $request)
           {
-           Registro::create($request->all());
+            $request->validated();
+            Registro::create($request->all());
            
            if ($request->id_codificacion=="1"){
    
@@ -194,8 +200,9 @@ class HomeController extends Controller
              }
       
            }
-           public function jazztelpago(Request $request)
+           public function jazztelpago(RegistroRequest $request)
            {
+            $request->validated();
             Registro::create($request->all());
             
             if ($request->id_codificacion=="1"){
