@@ -215,7 +215,7 @@
                                                 <h4 class="card"><center>Total a pagar</h4>
                                                 <input type="hidden" name="pvp" id="pvp"/> 
                                                 <input type="hidden" name="codificacion" id="resultado3"/> 
-                                                <textarea name="resultado3" id="resultado3" rows="8" cols="50" disabled>
+                                                <textarea name="resultado2" id="resultado2" rows="8" cols="50" disabled>
                                                 </textarea>    
                                                 <br><br>Codificacion: 
                                                 <select size="1" id="final" onchange="javascript:cambio()">
@@ -415,6 +415,7 @@
         document.getElementById('id_codificacion').value = valor_codificacion;
         document.getElementById('pvp').value = importe;
         document.getElementById('resultado3').value = nombre + telefono + t_internet + t_adicional + t_movil + " total a pagar " + importe +" con " + impuesto +" "+ texto_codificacion;
+        document.getElementById('resultado2').value = nombre + telefono + t_internet + t_adicional + t_movil + " total a pagar " + importe +" con " + impuesto +" "+ texto_codificacion;
         
     }
 
