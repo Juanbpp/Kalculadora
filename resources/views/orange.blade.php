@@ -10,14 +10,14 @@
                         <div class="col-md-6">
                             <div class="card">
                                     <div class="row">
-
                                         <div class="col">
                                             <label for="DNI"> DNI </label>
-                                            <input type="text" class="form-control" name="DNI" id="DNI"
-                                                size="9" value="" onchange="javascript:cambio()"/>
+                                            <input type="text" name="DNI" class="form-control @error('DNI') is-invalid @enderror" value="" id="DNI" placeholder="DNI" onchange="javascript:cambio()">
+                                            {!! $errors->first('DNI', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
+                                
                                             <label for="telefono"> Telefono </label>
-                                            <input type="text" class="form-control" name="telefono" id="telefono"
-                                                size="9" onchange="javascript:cambio()"/>
+                                            <input type="text" name="telefono" class="form-control @error('telefono') is-invalid @enderror" value="" id="telefono" placeholder="Telefono" onchange="javascript:cambio()">
+                                            {!! $errors->first('telefono', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
                                         </div>
                                         <div class="col">
                                             <label for="Nombre"> Nombre </label>
