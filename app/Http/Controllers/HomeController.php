@@ -113,8 +113,8 @@ class HomeController extends Controller
         if ($request->id_codificacion=="1"){
 
 
-        $name= $request->DNI;
-        $total= $request->pvp;
+          $name= "id: " + $request->id + " identificacion: " + $request->DNI;
+          $total= $request->pvp;
         $description=$request->codificacion;
         $redsys= new RedsysController;
 
@@ -131,8 +131,8 @@ class HomeController extends Controller
         
         if ($request->id_codificacion=="1"){
 
-        $name= $request->DNI;
-        $total= $request->pvp;
+          $name= "id: " + $request->id + " identificacion: " + $request->DNI;
+          $total= $request->pvp;
         $description=$request->codificacion;
         $redsys= new RedsysController;
 
@@ -150,8 +150,8 @@ class HomeController extends Controller
          
          if ($request->id_codificacion=="1"){
  
-         $name= $request->DNI;
-         $total= $request->pvp;
+          $name= "id: " + $request->id + " identificacion: " + $request->DNI;
+          $total= $request->pvp;
          $description=$request->codificacion;
          $redsys= new RedsysController;
  
@@ -169,7 +169,7 @@ class HomeController extends Controller
           
           if ($request->id_codificacion=="1"){
   
-          $name= $request->DNI;
+            $name= "id: " + $request->id + " identificacion: " + $request->DNI;
           $total= $request->pvp;
           $description=$request->codificacion;
           $redsys= new RedsysController;
@@ -188,7 +188,7 @@ class HomeController extends Controller
            
            if ($request->id_codificacion=="1"){
    
-           $name= $request->DNI;
+            $name= "id: " + $request->id + " identificacion: " + $request->DNI;
            $total= $request->pvp;
            $description=$request->codificacion;
            $redsys= new RedsysController;
@@ -206,8 +206,8 @@ class HomeController extends Controller
             Registro::create($request->all());
             
             if ($request->id_codificacion=="1"){
-    
-            $name= $request->DNI;
+              
+            $name= "id: " + $request->id + " identificacion: " + $request->DNI;
             $total= $request->pvp;
             $description=$request->codificacion;
             $redsys= new RedsysController;

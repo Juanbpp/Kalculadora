@@ -9,7 +9,12 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="card">
-                                    <div class="row">
+                                @if ($message = Session::get('success'))
+                                <div class="alert alert-success m-4">
+                                    <p>{{ $message }}</p>
+                                </div>
+                            @endif
+                                            <div class="row">
                                         <div class="col">
                                             <label for="DNI"> DNI </label>
                                             <input type="text" name="DNI" class="form-control @error('DNI') is-invalid @enderror" value="" id="DNI" placeholder="DNI" onchange="javascript:cambio()">

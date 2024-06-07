@@ -22,11 +22,8 @@ class RegistroRequest extends FormRequest
     public function rules(): array
     {
         return [
-			'DNI' => 'required|string',
 			'impuesto' => 'required|string',
-            'telefono' => 'required|numeric',
-			'observaciones' => 'string',
-			'id_user' => 'required',
+        	'id_user' => 'required',
         ];
     }
 }
