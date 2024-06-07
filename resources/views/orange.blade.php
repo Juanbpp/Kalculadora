@@ -235,7 +235,7 @@
                                                     @endforeach
                                                 </select><br><br>
                                                 Observaciones: <input type="text" name="observaciones"
-                                                    id="observaciones" /><br><br>
+                                                    id="observaciones" />
                                                 <input type="hidden" name="id_user" id="id_user"
                                                     value="{{ auth()->user()->id }}" /><br><br>
                                                 <input type="hidden" name="id_codificacion" id="id_codificacion" />

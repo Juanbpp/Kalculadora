@@ -237,7 +237,7 @@
                                                 Observaciones: <input type="text" name="observaciones"
                                                     id="observaciones" /><br><br>
                                                 <input type="hidden" name="id_user" id="id_user"
-                                                    value="{{ auth()->user()->id }}" /><br><br>
+                                                    value="{{ auth()->user()->id }}" />
                                                 <input type="hidden" name="id_codificacion" id="id_codificacion" />
                                                 <button onclick="javascript:cambio(),submit()" class="btn btn-primary">
                                                     ENVIAR
