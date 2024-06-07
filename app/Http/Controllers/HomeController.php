@@ -10,6 +10,8 @@ use App\Models\Registro;
 use App\Http\Controllers\RedsysController;
 use App\Http\Requests\RegistroRequest;
 
+use function PHPUnit\Framework\isNull;
+
 class HomeController extends Controller
 {
     /**
@@ -112,8 +114,9 @@ class HomeController extends Controller
 
         if ($request->id_codificacion=="1"){
 
+          if (isNull($request->DNI)){$dni="";}else{$dni=$request->DNI;};
 
-          $name= "id: " + $request->id + " identificacion: " + $request->DNI;
+          $name= "id: " + $request->id + " identificacion: " + $dni;
           $total= $request->pvp;
         $description=$request->codificacion;
         $redsys= new RedsysController;
@@ -131,7 +134,9 @@ class HomeController extends Controller
         
         if ($request->id_codificacion=="1"){
 
-          $name= "id: " + $request->id + " identificacion: " + $request->DNI;
+          if (isNull($request->DNI)){$dni="";}else{$dni=$request->DNI;};
+
+          $name= "id: " + $request->id + " identificacion: " + $dni;
           $total= $request->pvp;
         $description=$request->codificacion;
         $redsys= new RedsysController;
@@ -150,7 +155,9 @@ class HomeController extends Controller
          
          if ($request->id_codificacion=="1"){
  
-          $name= "id: " + $request->id + " identificacion: " + $request->DNI;
+          if (isNull($request->DNI)){$dni="";}else{$dni=$request->DNI;};
+
+          $name= "id: " + $request->id + " identificacion: " + $dni;
           $total= $request->pvp;
          $description=$request->codificacion;
          $redsys= new RedsysController;
@@ -169,8 +176,10 @@ class HomeController extends Controller
           
           if ($request->id_codificacion=="1"){
   
-            $name= "id: " + $request->id + " identificacion: " + $request->DNI;
-          $total= $request->pvp;
+            if (isNull($request->DNI)){$dni="";}else{$dni=$request->DNI;};
+
+            $name= "id: " + $request->id + " identificacion: " + $dni;
+            $total= $request->pvp;
           $description=$request->codificacion;
           $redsys= new RedsysController;
   
@@ -188,8 +197,10 @@ class HomeController extends Controller
            
            if ($request->id_codificacion=="1"){
    
-            $name= "id: " + $request->id + " identificacion: " + $request->DNI;
-           $total= $request->pvp;
+            if (isNull($request->DNI)){$dni="";}else{$dni=$request->DNI;};
+
+            $name= "id: " + $request->id + " identificacion: " + $dni;
+             $total= $request->pvp;
            $description=$request->codificacion;
            $redsys= new RedsysController;
    
@@ -207,8 +218,10 @@ class HomeController extends Controller
             
             if ($request->id_codificacion=="1"){
               
-            $name= "id: " + $request->id + " identificacion: " + $request->DNI;
-            $total= $request->pvp;
+              if (isNull($request->DNI)){$dni="";}else{$dni=$request->DNI;};
+
+              $name= "id: " + $request->id + " identificacion: " + $dni;
+                $total= $request->pvp;
             $description=$request->codificacion;
             $redsys= new RedsysController;
     
