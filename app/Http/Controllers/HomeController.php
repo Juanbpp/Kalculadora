@@ -109,15 +109,15 @@ class HomeController extends Controller
 
     public function yoigo(RegistroRequest $request)
     {
-        $request->validated();
-        Registro::create($request->all());
+      $request->validated();
+      $registro=Registro::create($request->all());
+      $registro->id;
+     if ($request->id_codificacion=="1"){
 
-        if ($request->id_codificacion=="1"){
+      if (isNull($request->DNI)){$dni="";}else{$dni=$request->DNI;};
 
-          if (isNull($request->DNI)){$dni="";}else{$dni=$request->DNI;};
-
-          $name= "id: " + $request->id + " identificacion: " + $dni;
-          $total= $request->pvp;
+      $name= "id: " + $registro->id + " identificacion: " + $dni;
+      $total= $request->pvp;
         $description=$request->codificacion;
         $redsys= new RedsysController;
 
@@ -130,14 +130,14 @@ class HomeController extends Controller
        public function masmovil(RegistroRequest $request)
        {
         $request->validated();
-        Registro::create($request->all());
-        
-        if ($request->id_codificacion=="1"){
+        $registro=Registro::create($request->all());
+        $registro->id;
+       if ($request->id_codificacion=="1"){
 
-          if (isNull($request->DNI)){$dni="";}else{$dni=$request->DNI;};
+        if (isNull($request->DNI)){$dni="";}else{$dni=$request->DNI;};
 
-          $name= "id: " + $request->id + " identificacion: " + $dni;
-          $total= $request->pvp;
+        $name= "id: " + $registro->id + " identificacion: " + $dni;
+      $total= $request->pvp;
         $description=$request->codificacion;
         $redsys= new RedsysController;
 
@@ -150,15 +150,15 @@ class HomeController extends Controller
         }
         public function movistarpago(RegistroRequest $request)
         {
-            $request->validated();
-            Registro::create($request->all());
-         
+          $request->validated();
+          $registro=Registro::create($request->all());
+          $registro->id;
          if ($request->id_codificacion=="1"){
  
           if (isNull($request->DNI)){$dni="";}else{$dni=$request->DNI;};
 
-          $name= "id: " + $request->id + " identificacion: " + $dni;
-          $total= $request->pvp;
+          $name= "id: " + $registro->id + " identificacion: " + $dni;
+        $total= $request->pvp;
          $description=$request->codificacion;
          $redsys= new RedsysController;
  
@@ -171,15 +171,15 @@ class HomeController extends Controller
          }
          public function vodafonepago(RegistroRequest $request)
          {
-            $request->validated();
-            Registro::create($request->all());
-          
-          if ($request->id_codificacion=="1"){
-  
-            if (isNull($request->DNI)){$dni="";}else{$dni=$request->DNI;};
+          $request->validated();
+          $registro=Registro::create($request->all());
+          $registro->id;
+         if ($request->id_codificacion=="1"){
+ 
+          if (isNull($request->DNI)){$dni="";}else{$dni=$request->DNI;};
 
-            $name= "id: " + $request->id + " identificacion: " + $dni;
-            $total= $request->pvp;
+          $name= "id: " + $registro->id + " identificacion: " + $dni;
+          $total= $request->pvp;
           $description=$request->codificacion;
           $redsys= new RedsysController;
   
@@ -193,13 +193,13 @@ class HomeController extends Controller
           public function orangepago(RegistroRequest $request)
           {
             $request->validated();
-            Registro::create($request->all());
-           
+            $registro=Registro::create($request->all());
+            $registro->id;
            if ($request->id_codificacion=="1"){
    
             if (isNull($request->DNI)){$dni="";}else{$dni=$request->DNI;};
 
-            $name= "id: " + $request->id + " identificacion: " + $dni;
+            $name= "id: " + $registro->id + " identificacion: " + $dni;
              $total= $request->pvp;
            $description=$request->codificacion;
            $redsys= new RedsysController;
@@ -214,13 +214,13 @@ class HomeController extends Controller
            public function jazztelpago(RegistroRequest $request)
            {
             $request->validated();
-            Registro::create($request->all());
-            
-            if ($request->id_codificacion=="1"){
-              
-              if (isNull($request->DNI)){$dni="";}else{$dni=$request->DNI;};
+            $registro=Registro::create($request->all());
+            $registro->id;
+           if ($request->id_codificacion=="1"){
+   
+            if (isNull($request->DNI)){$dni="";}else{$dni=$request->DNI;};
 
-              $name= "id: " + $request->id + " identificacion: " + $dni;
+            $name= "id: " + $registro->id + " identificacion: " + $dni;
                 $total= $request->pvp;
             $description=$request->codificacion;
             $redsys= new RedsysController;
