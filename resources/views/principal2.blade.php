@@ -216,43 +216,40 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="card">
-                                    <div class="card-header">
-                                        <center>Contratado
-                                    </div>
-                                    <center>
-                                        <div class="card-body">
-                                            <h4 class="card">
-                                                <center>Total a pagar
-                                            </h4>
-                                            <input type="hidden" name="pvp" id="pvp" />
-                                            <input type="hidden" name="codificacion" id="resultado3" />
-                                            <textarea name="resultado2" id="resultado2" rows="8" cols="50" disabled>
-                                                </textarea>
-                                            <br><br>Codificacion:
-                                            <select size="1" id="final" onchange="javascript:cambio()">
-                                                <option selected value="0">Seleccione uno ...</option>
-                                                @foreach ($codificaciones as $codificacion)
-                                                    <option value="{{ $codificacion->id }}">
-                                                        {{ $codificacion->codificacion }}
-                                                    </option>
-                                                @endforeach
-                                            </select><br><br>
-                                            Observaciones: <input type="text" name="observaciones"
-                                                id="observaciones" /><br><br>
-                                            <input type="hidden" name="id_user" id="id_user"
-                                                value="{{ auth()->user()->id }}" /><br><br>
-                                            <input type="hidden" name="id_codificacion" id="id_codificacion" />
-                                            <button onclick="javascript:cambio(),submit()" class="btn btn-primary">
-                                                ENVIAR
-                                            </button>
-
+                                        <div class="card-header">
+                                            <center>Contratado
                                         </div>
+                                        <center>
+                                            <div class="card-body">
+                                                <input type="hidden" name="pvp" id="pvp" />
+                                                <input type="hidden" name="codificacion" id="resultado3" />
+                                                <textarea name="resultado2" id="resultado2" rows="8" cols="50" disabled>
+                                                </textarea>
+                                                <br><br>Codificacion:
+                                                <select size="1" id="final" onchange="javascript:cambio()">
+                                                    <option selected value="0">Seleccione uno ...</option>
+                                                    @foreach ($codificaciones as $codificacion)
+                                                        <option value="{{ $codificacion->id }}">
+                                                            {{ $codificacion->codificacion }}
+                                                        </option>
+                                                    @endforeach
+                                                </select><br><br>
+                                                Observaciones: <input type="text" name="observaciones"
+                                                    id="observaciones" /><br><br>
+                                                <input type="hidden" name="id_user" id="id_user"
+                                                    value="{{ auth()->user()->id }}" /><br><br>
+                                                <input type="hidden" name="id_codificacion" id="id_codificacion" />
+                                                <button onclick="javascript:cambio(),submit()" class="btn btn-primary">
+                                                    ENVIAR
+                                                </button>
+
+                                            </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
         </form>
     </div>
     </div>
