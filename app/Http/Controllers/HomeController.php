@@ -111,12 +111,12 @@ class HomeController extends Controller
     {
       $request->validated();
       $registro=Registro::create($request->all());
-      $registro->id;
+      $id=$registro->id;
      if ($request->id_codificacion=="1"){
 
       if (isNull($request->DNI)){$dni="";}else{$dni=$request->DNI;};
 
-      $name= "id: " + $registro->id + " identificacion: " + $dni;
+      $name= "id: " + $id + " identificacion: " + $dni;
       $total= $request->pvp;
         $description=$request->codificacion;
         $redsys= new RedsysController;
