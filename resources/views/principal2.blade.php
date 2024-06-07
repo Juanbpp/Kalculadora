@@ -162,58 +162,58 @@
                             </div><br>
                         </div>
                         <div class="col-md-6">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="card-group">
-                                            @foreach ($productosmoviles as $producto)
-                                                <div class="card">
-                                                    <center>
-                                                        <div class="card-header">{{ $producto->producto }}</div>
-                                                        <div class="card-body">
-                                                            <select size="1" id="movil_{{ $loop->iteration }}"
-                                                                name="cantidad_movil_{{ $loop->iteration }}"
-                                                                onchange="javascript:cambio()">
-                                                                <option selected value="0">0</option>
-                                                                <option value="1">1</option>
-                                                                <option value="2">2</option>
-                                                                <option value="3">3</option>
-                                                                <option value="4">4</option>
-                                                                <option value="5">5</option>
-                                                            </select> &nbsp;
-                                                            <input type="hidden" id="vmovil_{{ $loop->iteration }}"
-                                                                size="1" disabled>
-                                                            <input type="hidden" id="imovil_{{ $loop->iteration }}"
-                                                                size="1" value="{{ $producto->precio }}" />
-                                                            <input type="hidden" id="tmovil_{{ $loop->iteration }}"
-                                                                size="1" value="{{ $producto->producto }}" />
-                                                            <input type="hidden" name="id_movil_{{ $loop->iteration }}"
-                                                                size="1" value="{{ $producto->id }}" />
-                                                        </div>
-                                                        <div>
-                                                            <i class="bi bi-percent"></i>
-                                                            <select size="1" id="dmovil_{{ $loop->iteration }}"
-                                                                onchange="javascript:cambio()">
-                                                                <option selected value="0">%</option>
-                                                                @foreach ($descuentos as $producto)
-                                                                    <option value="{{ $producto->importe }}"
-                                                                        tipo="{{ $producto->tipo }}"
-                                                                        codigo="{{ $producto->id }}">
-                                                                        {{ $producto->descuento }}
-                                                                    </option>
-                                                                @endforeach
-                                                            </select>
-                                                            <input type="hidden"
-                                                                name="descuento_movil_{{ $loop->iteration }}"
-                                                                id="descuento_movil_{{ $loop->iteration }}"
-                                                                size="1" /><br><br>
-                                                        </div>
-                                                </div>
-                                            @endforeach
-                                        </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="card-group">
+                                        @foreach ($productosmoviles as $producto)
+                                            <div class="card">
+                                                <center>
+                                                    <div class="card-header">{{ $producto->producto }}</div>
+                                                    <div class="card-body">
+                                                        <select size="1" id="movil_{{ $loop->iteration }}"
+                                                            name="cantidad_movil_{{ $loop->iteration }}"
+                                                            onchange="javascript:cambio()">
+                                                            <option selected value="0">0</option>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                        </select> &nbsp;
+                                                        <input type="hidden" id="vmovil_{{ $loop->iteration }}"
+                                                            size="1" disabled>
+                                                        <input type="hidden" id="imovil_{{ $loop->iteration }}"
+                                                            size="1" value="{{ $producto->precio }}" />
+                                                        <input type="hidden" id="tmovil_{{ $loop->iteration }}"
+                                                            size="1" value="{{ $producto->producto }}" />
+                                                        <input type="hidden" name="id_movil_{{ $loop->iteration }}"
+                                                            size="1" value="{{ $producto->id }}" />
+                                                    </div>
+                                                    <div>
+                                                        <i class="bi bi-percent"></i>
+                                                        <select size="1" id="dmovil_{{ $loop->iteration }}"
+                                                            onchange="javascript:cambio()">
+                                                            <option selected value="0">%</option>
+                                                            @foreach ($descuentos as $producto)
+                                                                <option value="{{ $producto->importe }}"
+                                                                    tipo="{{ $producto->tipo }}"
+                                                                    codigo="{{ $producto->id }}">
+                                                                    {{ $producto->descuento }}
+                                                                </option>
+                                                            @endforeach
+                                                        </select>
+                                                        <input type="hidden"
+                                                            name="descuento_movil_{{ $loop->iteration }}"
+                                                            id="descuento_movil_{{ $loop->iteration }}"
+                                                            size="1" /><br><br>
+                                                    </div>
+                                            </div>
+                                        @endforeach
                                     </div>
-                                </div><br>
-                            </div>
-                            <div class="col-md-12">
+                                </div>
+                            </div><br>
+
+                            <div class="row">
                                 <div class="card">
                                     <div class="card-header">
                                         <center>Contratado
