@@ -1,38 +1,49 @@
 @extends('layouts.admin')
 
 @section('content')
-    <div class="container"  style="background-color: #fcbf08" onload="javascript:cambio()">
-        <form id="formulario"name="formulario" method="POST" action="{{ route('principal3') }}" role="form" enctype="multipart/form-data">
+    <div class="container" style="background-color: #fcbf08" onload="javascript:cambio()">
+        <form id="formulario"name="formulario" method="POST" action="{{ route('principal3') }}" role="form"
+            enctype="multipart/form-data">
             @csrf
             <div class="row">
                 <div class="col-md-12">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="card">
-                                    <div class="row">
-                                        <div class="col">
-                                            <label for="DNI"> DNI </label>
-                                            <input type="text" name="DNI" class="form-control @error('DNI') is-invalid @enderror" value="" id="DNI" placeholder="DNI" onchange="javascript:cambio()">
-                                            {!! $errors->first('DNI', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
-                                
-                                            <label for="telefono"> Telefono </label>
-                                            <input type="text" name="telefono" class="form-control @error('telefono') is-invalid @enderror" value="" id="telefono" placeholder="Telefono" onchange="javascript:cambio()">
-                                            {!! $errors->first('telefono', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
-                                        </div>
-                                        <div class="col">
-                                            <label for="Nombre"> Nombre </label>
-                                            <input type="text" class="form-control" id="Nombre" name="nombre" onchange="javascript:cambio()"/>
-                                            <label for="impuesto"> impuesto </label>
-
-                                            <select class="form-control" id="impuesto" name="impuesto"
-                                                onchange="javascript:cambio()">
-                                                <option value="IVA">IVA</option>
-                                                <option value="IGIC">IGIC</option>
-                                                <option value="IPSI Ceuta">IPSI Ceuta</option>
-                                                <option value="IPSI Melilla">IPSI Melilla</option>
-                                            </select><br>
-                                        </div>
+                                @if ($message = Session::get('success'))
+                                    <div class="alert alert-success m-4">
+                                        <p>{{ $message }}</p>
                                     </div>
+                                @endif
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="DNI"> DNI </label>
+                                        <input type="text" name="DNI"
+                                            class="form-control @error('DNI') is-invalid @enderror" value=""
+                                            id="DNI" placeholder="DNI" onchange="javascript:cambio()">
+                                        {!! $errors->first('DNI', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
+
+                                        <label for="telefono"> Telefono </label>
+                                        <input type="text" name="telefono"
+                                            class="form-control @error('telefono') is-invalid @enderror" value=""
+                                            id="telefono" placeholder="Telefono" onchange="javascript:cambio()">
+                                        {!! $errors->first('telefono', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
+                                    </div>
+                                    <div class="col">
+                                        <label for="Nombre"> Nombre </label>
+                                        <input type="text" class="form-control" id="Nombre" name="nombre"
+                                            onchange="javascript:cambio()" />
+                                        <label for="impuesto"> impuesto </label>
+
+                                        <select class="form-control" id="impuesto" name="impuesto"
+                                            onchange="javascript:cambio()">
+                                            <option value="IVA">IVA</option>
+                                            <option value="IGIC">IGIC</option>
+                                            <option value="IPSI Ceuta">IPSI Ceuta</option>
+                                            <option value="IPSI Melilla">IPSI Melilla</option>
+                                        </select><br>
+                                    </div>
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
@@ -90,8 +101,7 @@
                                                 </div>
                                                 <div class="col">
                                                     <i class="bi bi-percent"></i>
-                                                    <select size="1" id="descuento"
-                                                        onchange="javascript:cambio()">
+                                                    <select size="1" id="descuento" onchange="javascript:cambio()">
                                                         <option selected value="0">Seleccione uno ...</option>
                                                         @foreach ($descuentos as $producto)
                                                             <option value="{{ $producto->importe }}"
@@ -115,7 +125,8 @@
                                                             <div class="card-body">
                                                                 <div>
                                                                     <select size="1"
-                                                                        id="adicional_{{ $loop->iteration }}" name="cantidad_adicional_{{ $loop->iteration }}"
+                                                                        id="adicional_{{ $loop->iteration }}"
+                                                                        name="cantidad_adicional_{{ $loop->iteration }}"
                                                                         onchange="javascript:cambio()">
                                                                         <option selected value="0">0</option>
                                                                         <option value="1">1</option>
@@ -123,7 +134,7 @@
                                                                         <option value="3">3</option>
                                                                         <option value="4">4</option>
                                                                         <option value="5">5</option>
-                                                                    </select> &nbsp;&nbsp; 
+                                                                    </select> &nbsp;&nbsp;
                                                                     <input type="hidden"
                                                                         id="vadicional_{{ $loop->iteration }}"
                                                                         size="1" onchange="javascript:cambio()"
@@ -145,7 +156,7 @@
                                             </div>
                                         </div>
                                     </div><br>
-                                
+
                                 </div>
                             </div><br>
                         </div>
@@ -159,7 +170,8 @@
                                                     <center>
                                                         <div class="card-header">{{ $producto->producto }}</div>
                                                         <div class="card-body">
-                                                            <select size="1" id="movil_{{ $loop->iteration }}" name="cantidad_movil_{{ $loop->iteration }}" 
+                                                            <select size="1" id="movil_{{ $loop->iteration }}"
+                                                                name="cantidad_movil_{{ $loop->iteration }}"
                                                                 onchange="javascript:cambio()">
                                                                 <option selected value="0">0</option>
                                                                 <option value="1">1</option>
@@ -167,10 +179,9 @@
                                                                 <option value="3">3</option>
                                                                 <option value="4">4</option>
                                                                 <option value="5">5</option>
-                                                            </select> &nbsp; 
-                                                            <input type="hidden"
-                                                                id="vmovil_{{ $loop->iteration }}" size="1"
-                                                                disabled>
+                                                            </select> &nbsp;
+                                                            <input type="hidden" id="vmovil_{{ $loop->iteration }}"
+                                                                size="1" disabled>
                                                             <input type="hidden" id="imovil_{{ $loop->iteration }}"
                                                                 size="1" value="{{ $producto->precio }}" />
                                                             <input type="hidden" id="tmovil_{{ $loop->iteration }}"
@@ -194,7 +205,7 @@
                                                             <input type="hidden"
                                                                 name="descuento_movil_{{ $loop->iteration }}"
                                                                 id="descuento_movil_{{ $loop->iteration }}"
-                                                                size="1"  /><br><br>
+                                                                size="1" /><br><br>
                                                         </div>
                                                 </div>
                                             @endforeach
@@ -202,48 +213,51 @@
                                     </div>
                                 </div><br><br>
                             </div>
-                                <div class="col-md-12">
-                                    
-                                    
-                              
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <center>Contratado
-                                        </div>
-                                  <center>
-                                            <div class="card-body">
-                                                <h4 class="card"><center>Total a pagar</h4>
-                                                <input type="hidden" name="pvp" id="pvp"/> 
-                                                <input type="hidden" name="codificacion" id="resultado3"/> 
-                                                <textarea name="resultado2" id="resultado2" rows="8" cols="50" disabled>
-                                                </textarea>    
-                                                <br><br>Codificacion: 
-                                                <select size="1" id="final" onchange="javascript:cambio()">
-                                                    <option selected value="0">Seleccione uno ...</option>
-                                                    @foreach ($codificaciones as $codificacion)
-                                                        <option value="{{ $codificacion->id }}">
-                                                            {{ $codificacion->codificacion }}
-                                                        </option>
-                                                    @endforeach
-                                                </select><br><br>
-                                                Observaciones: <input type="text" name="observaciones" id="observaciones" /><br><br>
-                                                <input type="hidden" name="id_user" id="id_user" value="{{auth()->user()->id}}" /><br><br>
-                                                <input type="hidden" name="id_codificacion" id="id_codificacion" />
-                                                <button onclick="javascript:cambio(),submit()" class="btn btn-primary">
-                                                    ENVIAR
-                                                </button>
+                            <div class="col-md-12">
 
-                                            </div>
+
+
+                                <div class="card">
+                                    <div class="card-header">
+                                        <center>Contratado
                                     </div>
+                                    <center>
+                                        <div class="card-body">
+                                            <h4 class="card">
+                                                <center>Total a pagar
+                                            </h4>
+                                            <input type="hidden" name="pvp" id="pvp" />
+                                            <input type="hidden" name="codificacion" id="resultado3" />
+                                            <textarea name="resultado2" id="resultado2" rows="8" cols="50" disabled>
+                                                </textarea>
+                                            <br><br>Codificacion:
+                                            <select size="1" id="final" onchange="javascript:cambio()">
+                                                <option selected value="0">Seleccione uno ...</option>
+                                                @foreach ($codificaciones as $codificacion)
+                                                    <option value="{{ $codificacion->id }}">
+                                                        {{ $codificacion->codificacion }}
+                                                    </option>
+                                                @endforeach
+                                            </select><br><br>
+                                            Observaciones: <input type="text" name="observaciones"
+                                                id="observaciones" /><br><br>
+                                            <input type="hidden" name="id_user" id="id_user"
+                                                value="{{ auth()->user()->id }}" /><br><br>
+                                            <input type="hidden" name="id_codificacion" id="id_codificacion" />
+                                            <button onclick="javascript:cambio(),submit()" class="btn btn-primary">
+                                                ENVIAR
+                                            </button>
+
+                                        </div>
                                 </div>
                             </div>
                         </div>
-                     </div>
+                    </div>
                 </div>
-            </form>
-        </div>
+            </div>
+        </form>
     </div>
-    
+    </div>
 @endsection
 
 <script>
@@ -340,7 +354,7 @@
                 option = dmovil.options[dmovil.selectedIndex],
                 valor = Number(option.value),
                 tipo = option.getAttribute('codigo');
-             document.getElementById('descuento_movil_'+i).value=tipo;   
+            document.getElementById('descuento_movil_' + i).value = tipo;
         }
         var total_movil = 0;
         for (let i = 1; i < select_movil.length + 1; i++) {
@@ -404,19 +418,21 @@
             option_codificacion = id_codificacion.options[id_codificacion.selectedIndex],
             valor_codificacion = Number(option_codificacion.value),
             codigo_codificacion = option_codificacion.getAttribute('codigo');
-        if (option_codificacion.text =="Seleccione uno ..."){
-            texto_codificacion="";
-        }else{
-            texto_codificacion="\n Codificacion: "+ option_codificacion.text;    
-        }    
-        var nombre= "Identificador: "+document.getElementById('DNI').value +"\n";
-        var telefono= "Telefono: "+ document.getElementById('telefono').value +"\n";
-        
+        if (option_codificacion.text == "Seleccione uno ...") {
+            texto_codificacion = "";
+        } else {
+            texto_codificacion = "\n Codificacion: " + option_codificacion.text;
+        }
+        var nombre = "Identificador: " + document.getElementById('DNI').value + "\n";
+        var telefono = "Telefono: " + document.getElementById('telefono').value + "\n";
+
         document.getElementById('id_codificacion').value = valor_codificacion;
         document.getElementById('pvp').value = importe;
-        document.getElementById('resultado3').value = nombre + telefono + t_internet + t_adicional + t_movil + " total a pagar " + importe +" con " + impuesto +" "+ texto_codificacion;
-        document.getElementById('resultado2').value = nombre + telefono + t_internet + t_adicional + t_movil + " total a pagar " + importe +" con " + impuesto +" "+ texto_codificacion;
-        
+        document.getElementById('resultado3').value = nombre + telefono + t_internet + t_adicional + t_movil +
+            " total a pagar " + importe + " con " + impuesto + " " + texto_codificacion;
+        document.getElementById('resultado2').value = nombre + telefono + t_internet + t_adicional + t_movil +
+            " total a pagar " + importe + " con " + impuesto + " " + texto_codificacion;
+
     }
 
     function cambioInternet(e) {
@@ -448,6 +464,4 @@
         document.getElementById('tv').selectedIndex = "0";
         document.getElementById('descuento').selectedIndex = "0";
     }
-
-
 </script>
