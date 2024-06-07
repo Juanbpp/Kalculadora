@@ -2,6 +2,7 @@
 
 @section('content')
     <div class="container" onload="javascript:cambio()">
+        <br>
         <form id="formulario"name="formulario" method="POST" action="{{ route('jazztel') }}" role="form"
             enctype="multipart/form-data">
             @csrf
@@ -164,6 +165,7 @@
                             <div class="row">
                                 <div class="row">
                                     <div class="col-md-12">
+                                        <br>
                                         <div class="card-group">
                                             @foreach ($productosmoviles as $producto)
                                                 <div class="card">
