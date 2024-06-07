@@ -116,7 +116,7 @@ class HomeController extends Controller
 
       if (isNull($request->DNI)){$dni="";}else{$dni=$request->DNI;};
 
-      $name= "id: " + $id + " identificacion: " + $dni;
+      $name= "id: ". $id ." identificacion: " . $dni;
       $total= $request->pvp;
         $description=$request->codificacion;
         $redsys= new RedsysController;
