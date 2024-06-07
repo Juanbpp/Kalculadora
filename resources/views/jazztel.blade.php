@@ -32,7 +32,7 @@
                                     </div>
                                     <div class="col">
                                         <label for="Nombre"> Nombre </label>
-                                        <input type="text" class="form-control" id="Nombre" name="nombre"
+                                        <input type="text" class="form-control" id="Nombre" name="nombre" placeholder="Nombre"
                                             onchange="javascript:cambio()" />
                                         <label for="impuesto"> impuesto </label>
 
