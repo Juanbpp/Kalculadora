@@ -18,10 +18,10 @@
                                 @endif
                                 <div class="row">
                                     <div class="col">
-                                        <label for="DNI"> DNI </label>
+                                        <label for="DNI"> Identificador </label>
                                         <input type="text" name="DNI"
                                             class="form-control @error('DNI') is-invalid @enderror" value=""
-                                            id="DNI" placeholder="DNI" onchange="javascript:cambio()">
+                                            id="DNI" placeholder="Identificador" onchange="javascript:cambio()">
                                         {!! $errors->first('DNI', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
 
                                         <label for="telefono"> Telefono </label>

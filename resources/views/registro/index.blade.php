@@ -31,7 +31,7 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Dni</th>
+										<th>Identificador</th>
 										<th>Telefono</th>
 										<th>Impuesto</th>
 										<th>Id Net</th>
