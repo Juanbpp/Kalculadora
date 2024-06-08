@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('template_title')
-    {{ __('Create') }} Marca
+    {{ __('Crear') }} Marca
 @endsection
 
 @section('content')
@@ -11,7 +11,7 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">{{ __('Create') }} Marca</span>
+                        <span class="card-title">{{ __('Crear') }} Marca</span>
                     </div>
                     <div class="card-body bg-white">
                         <form method="POST" action="{{ route('marcas.store') }}"  role="form" enctype="multipart/form-data">

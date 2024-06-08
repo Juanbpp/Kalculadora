@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('template_title')
-    User
+    Usuario
 @endsection
 
 @section('content')
@@ -13,7 +13,7 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('User') }}
+                                {{ __('Usuario') }}
                             </span>
 
                             <div class="float-right">
@@ -37,7 +37,7 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Name</th>
+										<th>Nombre</th>
 										<th>Email</th>
 
                                         <th></th>

@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('template_title')
-    {{ __('Update') }} Marca
+    {{ __('Actualizar') }} Marca
 @endsection
 
 @section('content')
@@ -11,7 +11,7 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">{{ __('Update') }} Marca</span>
+                        <span class="card-title">{{ __('Actualizar') }} Marca</span>
                     </div>
                     <div class="card-body bg-white">
                         <form method="POST" action="{{ route('marcas.update', $marca->id) }}"  role="form" enctype="multipart/form-data">

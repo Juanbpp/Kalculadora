@@ -119,6 +119,10 @@ return [
     'not_regex' => 'El formato del campo :attribute no es válido.',
     'numeric' => 'El campo :attribute debe ser un número.',
     'password' => [
+        'min' => [
+            'numeric' => 'El campo :attribute debe tener al menos :min.',
+        ],
+        'required' => 'El campo :attribute es requerido.',
         'letters' => 'El campo :attribute debe contener al menos una letra.',
         'mixed' => 'El campo :attribute debe contener al menos una letra mayúscula y una minúscula.',
         'numbers' => 'El campo :attribute debe contener al menos un número.',

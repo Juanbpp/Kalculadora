@@ -70,7 +70,6 @@
                         </div>
                     </div>
                 </div>
-         all()
             </div>
         </div>
     </div>
